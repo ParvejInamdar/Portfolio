@@ -11,11 +11,11 @@ function App() {
   return (
     <>
       <div className='sticky top-0 z-50'>
-      <NavBar />
+        <NavBar />
       </div>
       <div className='App h-full w-screen max-w-screen flex items-center justify-center overflow-hidden lg:!-mx-[17px]'>
         <div className='flex mx-auto items-center justify-center flex-col'>
-          <div className='w-full relative flex items-center justify-center bg-gradient-to-b from-yellow-100 to-orange-100 pt-4'>
+          <div className='w-full relative flex items-center justify-center bg-gradient-to-b from-yellow-100 to-orange-100 pt-8 xl:!pt-4 '>
             <Hero />
           </div>
           <div className='relative w-full px-5 lg:!px-10 '>

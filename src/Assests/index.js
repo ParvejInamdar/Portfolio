@@ -35,9 +35,10 @@ import biz from './img/biz4.jpeg';
 import techciti from './img/techciti.jpeg';
 import telegram from './img/telegram.png';
 import whatsapp from './img/whatsapp.png';
+import hamburger from './svg/hamburger_icon.svg'
 
 
 export {
     userImg1, userImg2, github, linkedin, instagram, vectorblue, vectorred, webdev, webdev2, webdev3, resume, footerwave, footerinsta, footerlinkedin, footerfacebook, playstore, appstore, web
-    , java, javascript, angular, mysql, react, typescript, ionic, tailwind, git, githubtech, bitbucket,junodating,luxecrews,dawrat,biz,techciti,telegram,whatsapp
+    , java, javascript, angular, mysql, react, typescript, ionic, tailwind, git, githubtech, bitbucket,junodating,luxecrews,dawrat,biz,techciti,telegram,whatsapp,hamburger
 };
