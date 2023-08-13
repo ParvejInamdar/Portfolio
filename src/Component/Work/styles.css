@@ -1,0 +1,15 @@
+
+.work-maincircle{
+    box-shadow: var(--smboxShadow);
+    background: white;
+}
+
+.work-maincircle>*{
+    @apply absolute;
+}
+
+.work-seccircle{
+    @apply absolute flex items-center justify-center bg-white;
+    border: 5px solid #ebebeb;
+    box-shadow: var(--smboxShadow);
+}

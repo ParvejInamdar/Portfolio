@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Arenq';
+  src: url('./Assests/fonts/arenq.otf');
+}
+
+@font-face {
+  font-family: 'Mova';
+  src: url('./Assests/fonts/mova.otf');
+}
+
+@font-face {
+  font-family: 'Beckman';
+  src: url('./Assests/fonts/beckman.otf');
+}
+
+@font-face {
+  font-family: 'Overcame Bold';
+  src: url('./Assests/fonts/overcame-bold.woff');
+}
+
+@font-face {
+  font-family: 'Overcame Outline';
+  src: url('./Assests/fonts/overcame-outline.woff');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.nav-links::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #292929;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links:hover::after {
+  width: 70%;
+}
+
+.diagonal-split-background{
+  background-color: #013A6B;
+  background-image: -webkit-linear-gradient(-40deg, #FFFFFF 60%, #F5F5F5 60%);
+}

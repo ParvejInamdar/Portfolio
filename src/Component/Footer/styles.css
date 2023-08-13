@@ -1,0 +1,40 @@
+.footer{
+    display: flex;
+    align-items: center;
+    /* margin: -0.5rem -3.5rem; */
+    flex-direction: column;
+    position: relative;
+}
+
+.footer-content{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    width: 100%;
+    gap: 1rem;
+}
+
+.footer-content>span:nth-child(1){
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.footer-icon{
+    display: flex;
+    gap: 1rem;
+}
+
+.logo{
+    height: 4rem;
+    width: 4rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+

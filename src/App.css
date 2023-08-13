@@ -1,0 +1,36 @@
+:root{
+  --yellow:#F5C32C;
+  --orange:#FCA61F;
+  --black:#242D49;
+  --gray:#788097;
+  --blueCard:#DDF8Fe;
+  --purple:rgb(238,210,255);
+  --boxShadow: 0px 10px 10px rgba(0,0,0,0.5);
+  --orangeCard: rgba(252,156,31,0.45);
+  --smboxShadow: -79px 51px 60px rgba(0,0,0,0.08);
+}
+
+.App{
+  /* padding: 0.5rem; */
+  /* width: 100%; */
+  /* overflow: hidden; */
+  color:var(--black);
+  /* background: green; */
+}
+
+.button{
+  border-radius: 34px;
+  /* color: white; */
+  /* font-size: 1rem; */
+  /* padding: 0.5rem 1rem; */
+  background: linear-gradient(180deg, #fdc50f ,26.71%, #fb982f ,99.36%) !important;
+  box-shadow: 0px 20px 24px 3px rgba(251,161,40,0.42);
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.orange-text-shadow {
+  text-shadow: 4px 4px 6px rgba(239, 145, 22, 0.706);
+}
