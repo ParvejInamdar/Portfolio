@@ -21,10 +21,10 @@ function App() {
           <div id="service" className='relative w-full px-5 lg:!px-10 '>
             <Services />
           </div>
-          <div id="experience" className='mt-24 mb-24 relative w-full px-5 lg:!px-10 '>
+          <div id="experience" className='lg:!mt-24 lg:!mb-24 relative w-full px-5 lg:!px-10 '>
             <Experience />
           </div>
-          <div id="work" className='mt-20 relative w-full px-5 lg:!px-10 '>
+          <div id="work" className=' lg:!mt-20 relative w-full px-5 lg:!px-10 '>
             <Works />
           </div>
           <div id="portfolio" className='mt-12 w-full px-5 lg:!px-10 '>

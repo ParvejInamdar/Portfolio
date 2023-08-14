@@ -26,7 +26,7 @@ const Experience = () => {
                  whileInView={{ opacity: 1 }}
                  viewport={{ once: false }}
                  transition={transition}
-                className='flex flex-col items-center justify-center py-8'>
+                className='flex flex-col items-center justify-center py-8 w-full lg:ml-4'>
                     <span className='text-[1.5rem] sm:!text-[2rem] lg:!text-[3rem] text-[--orange] font-bold font-mova text-shadow'>Experience</span>
                     <span className='text-[--gray] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] font-mova text-shadow'>Progressive Journey: From Past Achievements to Present Contributions</span>
                 </motion.div>

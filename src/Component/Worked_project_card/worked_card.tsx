@@ -62,7 +62,7 @@ const Worked_Card = ({ appName, appImage, playstoreLink, appstoreLink, webLink, 
             <motion.div
                 onClick={handleFlip} className={`absolute flex items-center justify-center cursor-pointer rounded-sm ${!isFlipped ? 'bottom-2 right-2' : 'bottom-2 left-2 scale-x-[-1]'}`}
             >
-                <span className='text-blue-700 bg-blue-200 hover:bg-blue-300 font-mova px-2 py-1 rounded-sm'>{!isFlipped ? 'Next' : 'Prev'}</span>
+                <span className='text-blue-700 font-mova px-2 py-1 rounded-sm'>{!isFlipped ? 'Next' : 'Prev'}</span>
             </motion.div>
         </motion.div>
     )

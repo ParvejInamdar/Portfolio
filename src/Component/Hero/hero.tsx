@@ -18,7 +18,7 @@ const Hero = () => {
                     className="w-full flex flex-col items-center lg:!items-start justify-center gap-1">
                     <span className='text-[1.5rem] sm:!text-[2rem] lg:!text-[3rem] text-[--black] font-bold font-mova text-shadow'>Hi, I Am</span>
                     <span className='text-[1.5rem] sm:!text-[2rem] lg:!text-[3rem] text-[--orange] font-bold font-mova text-shadow effect-type'>Parvej Inamdar</span>
-                    <span className='text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-[--gray] font-[200] px-0 sm:!px-8 lg:!px-0 font-mova text-shadow'>Frontend Developer with high level of experience in web designing and development, Producting the Quality work.</span>
+                    <span className='text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-[--gray] font-[200] px-0 sm:!px-8 lg:!px-0 font-mova text-shadow'>Experienced Frontend Developer with a Passion for Perfecting Web Design and Development.Focused on Producing High-Quality, Interactive Web Solutions.</span>
                 </motion.div>
                 <motion.button
                     initial={{ opacity: 0 }}
