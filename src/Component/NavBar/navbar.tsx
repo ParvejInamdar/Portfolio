@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react';
 import './styles.css';
 import { motion } from 'framer-motion';
 import { hamburger } from '../../Assests';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 function NavBar() {
     const [active, setActive] = useState('');
     const [colorChange, setColorchange] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('hero');
     const text = 'PARVEJ';
     const changeNavbarColor = () => {
         if (window.scrollY >= 80) {
@@ -29,12 +30,48 @@ function NavBar() {
         };
     }, [currentIndex, text.length]);
 
-    const scrollToSection = (id:any) => {
+    const scrollToSection = (id: any) => {
         const section = document.getElementById(id);
         if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
+            section.scrollIntoView({ behavior: 'smooth' });
         }
-      };
+    };
+
+    useEffect(() => {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.getAttribute('id');
+                    setActiveSection(sectionId || '');
+                }
+            });
+        }, options);
+
+        const sections = ['hero', 'service', 'experience', 'work', 'portfolio', 'contact'];
+
+        sections.forEach((section) => {
+            const element = document.getElementById(section);
+            if (element) {
+                observer.observe(element);
+            }
+        });
+
+        return () => {
+            sections.forEach((section) => {
+                const element = document.getElementById(section);
+                if (element) {
+                    observer.unobserve(element);
+                }
+            });
+        };
+    }, []);
+
 
     return (
         <div className={`absolute top-0 flex w-screen xl:!w-full items-center justify-between max-h-screen lg:!h-[10vh] ${colorChange ? 'bg-gradient-to-b from-orange-100 to-yellow-200 !shadow-lg' : ''}`}>
@@ -69,12 +106,12 @@ function NavBar() {
                 className=' px-10 hidden xl:!flex'>
                 <div className='flex w-full nav-list'>
                     <ul className='flex w-full'>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}><Link onClick={() => scrollToSection('hero')} to="#hero">Home</Link></li>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}><Link onClick={() => scrollToSection('service')} to="#service">Services</Link></li>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}><Link onClick={() => scrollToSection('experience')} to="#experience">Expriences</Link></li>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}><Link onClick={() => scrollToSection('work')} to="#work">Work</Link></li>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}><Link onClick={() => scrollToSection('portfolio')} to="#portfolio">PortFolio</Link></li>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}><Link onClick={() => scrollToSection('contact')} to="#contact">Contact Us</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}  ${activeSection === 'hero' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('hero')} to="#hero">Home</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'} ${activeSection === 'service' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('service')} to="#service">Services</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'} ${activeSection === 'experience' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('experience')} to="#experience">Expriences</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'} ${activeSection === 'work' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('work')} to="#work">Work</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'} ${activeSection === 'portfolio' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('portfolio')} to="#portfolio">PortFolio</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'} ${activeSection === 'contact' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('contact')} to="#contact">Contact Us</Link></li>
                     </ul>
                 </div>
             </motion.div>
