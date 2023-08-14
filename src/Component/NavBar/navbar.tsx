@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './styles.css';
 import { motion } from 'framer-motion';
 import { hamburger } from '../../Assests';
+import { Link } from 'react-router-dom';
 function NavBar() {
     const [active, setActive] = useState('');
     const [colorChange, setColorchange] = useState(false);
@@ -27,6 +28,13 @@ function NavBar() {
             clearInterval(interval);
         };
     }, [currentIndex, text.length]);
+
+    const scrollToSection = (id:any) => {
+        const section = document.getElementById(id);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
 
     return (
         <div className={`absolute top-0 flex w-screen xl:!w-full items-center justify-between max-h-screen lg:!h-[10vh] ${colorChange ? 'bg-gradient-to-b from-orange-100 to-yellow-200 !shadow-lg' : ''}`}>
@@ -61,17 +69,17 @@ function NavBar() {
                 className=' px-10 hidden xl:!flex'>
                 <div className='flex w-full nav-list'>
                     <ul className='flex w-full'>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}>Home</li>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}>About</li>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}>PortFolio</li>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}>Services</li>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}>Expriences</li>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}>Contact Us</li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}><Link onClick={() => scrollToSection('hero')} to="#hero">Home</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}><Link onClick={() => scrollToSection('service')} to="#service">Services</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}><Link onClick={() => scrollToSection('experience')} to="#experience">Expriences</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}><Link onClick={() => scrollToSection('work')} to="#work">Work</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}><Link onClick={() => scrollToSection('portfolio')} to="#portfolio">PortFolio</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}`}><Link onClick={() => scrollToSection('contact')} to="#contact">Contact Us</Link></li>
                     </ul>
                 </div>
             </motion.div>
             {isOpen &&
-                <div className='h-screen w-full absolute top-0 left-0 z-100'>
+                <div className='h-screen w-full absolute top-0 left-0 z-100 bg-black/20 overflow-hidden'>
                     <div className=' h-full w-[80%] sm:!w-[60%] bg-gradient-to-b from-orange-300 to-yellow-300 flex flex-col p-6'>
                         <div onClick={() => setIsOpen(false)} className='bg-gray-200 rounded-md py-2 px-2 w-full items-center justify-center flex font-mova uppercase'> close </div>
                         <div className='flex w-full mt-4'>

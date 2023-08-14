@@ -15,22 +15,22 @@ function App() {
       </div>
       <div className='App h-full w-screen max-w-screen flex items-center justify-center overflow-hidden lg:!-mx-[17px]'>
         <div className='flex mx-auto items-center justify-center flex-col'>
-          <div className='w-full relative flex items-center justify-center bg-gradient-to-b from-yellow-100 to-orange-100 pt-8 xl:!pt-4 '>
+          <div id="hero" className='w-full relative flex items-center justify-center bg-gradient-to-b from-yellow-100 to-orange-100 pt-8 xl:!pt-4 '>
             <Hero />
           </div>
-          <div className='relative w-full px-5 lg:!px-10 '>
+          <div id="service" className='relative w-full px-5 lg:!px-10 '>
             <Services />
           </div>
-          <div className='mt-24 mb-24 relative w-full px-5 lg:!px-10 '>
+          <div id="experience" className='mt-24 mb-24 relative w-full px-5 lg:!px-10 '>
             <Experience />
           </div>
-          <div className='mt-20 relative w-full px-5 lg:!px-10 '>
+          <div id="work" className='mt-20 relative w-full px-5 lg:!px-10 '>
             <Works />
           </div>
-          <div className='mt-12 w-full px-5 lg:!px-10 '>
+          <div id="portfolio" className='mt-12 w-full px-5 lg:!px-10 '>
             <Portfolio />
           </div>
-          <div className='mt-12 w-full px-5 lg:!px-10 '>
+          <div id="contact" className='mt-12 w-full px-5 lg:!px-10 '>
             <Contact />
           </div>
         </div>
