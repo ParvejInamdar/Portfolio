@@ -3,6 +3,7 @@ import './styles.css';
 import { motion } from 'framer-motion';
 import { hamburger } from '../../Assests';
 import { Link, useLocation } from 'react-router-dom';
+import SideBar from '../SideBar/sidebar';
 function NavBar() {
     const [active, setActive] = useState('');
     const [colorChange, setColorchange] = useState(false);
@@ -32,6 +33,7 @@ function NavBar() {
 
     const scrollToSection = (id: any) => {
         const section = document.getElementById(id);
+        setIsOpen(false);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
         }
@@ -89,7 +91,7 @@ function NavBar() {
                             {text.split('').map((char, index) => (
                                 <span
                                     key={index}
-                                    className={`${index === currentIndex ? 'char-bounce' : ''
+                                    className={`${index === currentIndex ? 'skew' : ''
                                         }`}
                                 >
                                     {char}
@@ -106,30 +108,18 @@ function NavBar() {
                 className=' px-10 hidden xl:!flex'>
                 <div className='flex w-full nav-list'>
                     <ul className='flex w-full'>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}  ${activeSection === 'hero' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('hero')} to="#hero">Home</Link></li>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'} ${activeSection === 'service' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('service')} to="#service">Services</Link></li>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'} ${activeSection === 'experience' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('experience')} to="#experience">Expriences</Link></li>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'} ${activeSection === 'work' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('work')} to="#work">Work</Link></li>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'} ${activeSection === 'portfolio' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('portfolio')} to="#portfolio">PortFolio</Link></li>
-                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'} ${activeSection === 'contact' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('contact')} to="#contact">Contact Us</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'}  ${activeSection === 'hero' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('hero')} to={`#${activeSection}`}>Home</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'} ${activeSection === 'service' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('service')} to={`#${activeSection}`}>Services</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'} ${activeSection === 'experience' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('experience')} to={`#${activeSection}`}>Exprience</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'} ${activeSection === 'work' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('work')} to={`#${activeSection}`}>Work</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'} ${activeSection === 'portfolio' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('portfolio')} to={`#${activeSection}`}>PortFolio</Link></li>
+                        <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 ${colorChange ? 'hover:text-white' : 'hover:text-[--orange]'} ${activeSection === 'contact' ? 'text-white' : ''}`}><Link onClick={() => scrollToSection('contact')} to={`#${activeSection}`}>Contact Us</Link></li>
                     </ul>
                 </div>
             </motion.div>
             {isOpen &&
                 <div className='h-screen w-full absolute top-0 left-0 z-100 bg-black/20 overflow-hidden'>
-                    <div className=' h-full w-[80%] sm:!w-[60%] bg-gradient-to-b from-orange-300 to-yellow-300 flex flex-col p-6'>
-                        <div onClick={() => setIsOpen(false)} className='bg-gray-200 rounded-md py-2 px-2 w-full items-center justify-center flex font-mova uppercase'> close </div>
-                        <div className='flex w-full mt-4'>
-                            <ul className='flex w-full flex-col'>
-                                <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 text-white`}>Home</li>
-                                <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 text-white`}>About</li>
-                                <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 text-white`}>PortFolio</li>
-                                <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 text-white`}>Services</li>
-                                <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 text-white`}>Expriences</li>
-                                <li className={`p-3 font-mova text-shadow text-[1.2rem] text-[--black] tracking-[.1rem] mx-3 text-white`}>Contact Us</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <SideBar isOpen={()=>setIsOpen(false)} scrollToSection={(id:any)=> scrollToSection(id) }/>
                 </div>}
         </div>
     )
