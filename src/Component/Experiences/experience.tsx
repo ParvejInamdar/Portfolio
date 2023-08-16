@@ -3,9 +3,11 @@ import './styles.css';
 import { motion } from 'framer-motion';
 import ExperienceCard from '../ExpericenceCard/experiencecard';
 import { angular, ionic, typescript, tailwind, githubtech, git, react, bitbucket } from '../../Assests';
+import Tabbar from '../TabBar/tabbar';
 
 const Experience = () => {
     const [width, setWidth] = useState(1501);
+    const [activeTab,SetActiveTab] = useState("Experience")
     const transition = { duration: 2, type: 'spring' };
 
     const handleResize = () => {
@@ -74,7 +76,8 @@ const Experience = () => {
                         <span className='text-[--orange] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem]'>Work</span>
                     </motion.div>
                 </div>
-                <div className='flex w-full items-center justify-center relative mt-4'>
+                <Tabbar tabName={["Experience","Education"]} changeTab={(activeTab:any)=>SetActiveTab(activeTab)}/>
+                {activeTab === 'Experience' && <div className='flex w-full items-center justify-center relative mt-4'>
                     <div className='grid grid-cols-1 sm:!grid-cols-2 sm:!grid-rows-2  place-items-center w-full relative'>
                         <div className="blur right-0 bottom-0 !bg-purple-200"></div>
                         <div className='order-1 sm:order-1 sm:col-start-1 sm:row-start-1 w-full place-items-center relative'>
@@ -140,7 +143,10 @@ const Experience = () => {
                         </div>
                         <div className="blur right-0 bottom-0 !bg-[#ABF1FF94]"></div>
                     </div>
-                </div>
+                </div>}
+                {activeTab === 'Education' && <div className='h-[50%] w-full relative'>
+                <div className='h-full w-[2px] border-2 border-orange-500 border-dashed my-2 absolute left-1/2'></div></div>
+                }
             </div>
         </div>
     )
