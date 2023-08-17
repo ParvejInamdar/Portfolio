@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
-import './styles.css';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { hamburger } from '../../Assests';
-import { Link, useLocation } from 'react-router-dom';
 import SideBar from '../SideBar/sidebar';
+import './styles.css';
+
 function NavBar() {
-    const [active, setActive] = useState('');
     const [colorChange, setColorchange] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
@@ -119,7 +119,7 @@ function NavBar() {
             </motion.div>
             {isOpen &&
                 <div className='h-screen w-full absolute top-0 left-0 z-100 bg-black/20 overflow-hidden'>
-                    <SideBar isOpen={()=>setIsOpen(false)} scrollToSection={(id:any)=> scrollToSection(id) }/>
+                    <SideBar isOpen={() => setIsOpen(false)} scrollToSection={(id: any) => scrollToSection(id)} />
                 </div>}
         </div>
     )

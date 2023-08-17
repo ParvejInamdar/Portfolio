@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
-import './styles.css';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
+import { useRef, useState } from 'react';
+import './styles.css';
 
 
 const Contact = () => {
@@ -50,7 +50,6 @@ const Contact = () => {
 
     return (
         <div className="w-full flex flex-col lg:!flex-row items-center justify-around h-full lg:!h-screen py-6 z-100">
-            {/* <div className="w-full flex items-center justify-center py-4"> */}
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -62,7 +61,6 @@ const Contact = () => {
                 <span className='text-[--gray] font-bold text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] font-mova text-shadow pr-8 text-center lg:!text-start'>You need Beautiful designs for your website or You need to build Web Application Leave a Request</span>
                 <div className="blur !bg-[#c1f5ff] !top-[24rem] !w-[21rem] !h-[11rem] !-left-[10rem]"></div>
             </motion.div>
-            {/* </div> */}
             <div className="w-full contact-right flex items-center justify-center relative">
                 <form ref={form} onSubmit={sendEmail} className='flex flex-col items-center font-mova w-full px-4 gap-4 mb-2'>
                     <div className='w-full'>

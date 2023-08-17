@@ -1,9 +1,8 @@
-import './styles.css';
-import 'swiper/css';
-import SimpleImageSlider from 'react-simple-image-slider';
-import Worked_Card from '../Worked_project_card/worked_card';
-import { webdev3, java, javascript, angular, mysql, react, typescript, junodating, ionic, tailwind, luxecrews, dawrat } from '../../Assests/index';
 import { motion } from 'framer-motion';
+import 'swiper/css';
+import { angular, dawrat, ionic, java, javascript, junodating, luxecrews, mysql, react, tailwind, typescript } from '../../Assests/index';
+import Worked_Card from '../Worked_project_card/worked_card';
+import './styles.css';
 
 const Portfolio = () => {
     const transition = { duration: 2, type: 'spring' };

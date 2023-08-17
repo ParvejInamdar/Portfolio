@@ -1,4 +1,3 @@
-import React from 'react';
 import './styles.css';
 const FloatingDiv = ({image,texttitle,textsubtitle}:any) =>{
     return(

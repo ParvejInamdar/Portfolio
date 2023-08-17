@@ -1,8 +1,7 @@
+import { motion } from 'framer-motion';
 import { resume, webdev, webdev2, webdev3 } from '../../Assests';
 import Card from '../Card/card';
 import './styles.css';
-// import Resume from './resume.pdf';
-import { motion } from 'framer-motion'
 
 const Services = () => {
 

@@ -1,29 +1,22 @@
-import React from 'react';
-import './styles.css';
-import { webdev, dawrat, biz, techciti } from '../../Assests'
 import { motion } from 'framer-motion';
+import { biz, dawrat, techciti, webdev } from '../../Assests';
+import './styles.css';
 
 const Works = () => {
     const transition = { duration: 2, type: 'spring' };
 
     return (
         <div className="flex h-full lg:!h-screen flex-col lg:!flex-row items-center justify-around">
-            <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: false }}
-            transition={transition}
-            className="flex flex-col justify-center items-center lg:!items-start w-full my-8 lg:!my-0 lg:!ml-16">
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: false }}
+                transition={transition}
+                className="flex flex-col justify-center items-center lg:!items-start w-full my-8 lg:!my-0 lg:!ml-16">
                 <span className='text-[1.5rem] sm:!text-[2rem] lg:!text-[3rem] text-[--black] font-bold font-mova text-shadow'>Corporate Journey</span>
                 <span className='text-[1rem] sm:!text-[1.5rem] lg:!text-[2rem] text-[--orange] font-bold font-mova text-shadow'>Making an Impact Across Organizations</span>
                 <div className="blur service-blur-left !bg-[#ABF1FF94]"></div>
             </motion.div>
-            {/* <div className="relative group">
-            <a href="#" className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300">Hover Me</a>
-            <div className="absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded-lg p-4 w-48 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p>This is the information card.</p>
-            </div>
-        </div> */}
             <div className="work-right flex items-center justify-center w-full py-4 px-2 pl-0 lg:!pl-16  relative">
                 <motion.div
                     initial={{ rotate: 45, opacity: 0.5 }}
@@ -73,7 +66,6 @@ const Works = () => {
                 </motion.div>
                 <div className="blur right-0 !bg-purple-300"></div>
             </div>
-
         </div>
     )
 }

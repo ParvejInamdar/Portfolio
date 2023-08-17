@@ -1,7 +1,7 @@
-import { appstore, playstore, web } from '../../Assests/index';
 import { motion } from 'framer-motion';
-import './styles.css';
 import { useState } from 'react';
+import { appstore, playstore, web } from '../../Assests/index';
+import './styles.css';
 
 const Worked_Card = ({ appName, appImage, playstoreLink, appstoreLink, webLink, technology }: any) => {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -10,6 +10,7 @@ const Worked_Card = ({ appName, appImage, playstoreLink, appstoreLink, webLink, 
     const handleFlip = () => {
         setIsFlipped((prevIsFlipped) => !prevIsFlipped);
     };
+    
     return (
         <motion.div
             className={`flex flex-col h-[15rem] w-[20rem] shadow-xl relative px-2 py-2 rounded-lg bg-gradient-to-br from-[#E9E9E9] to-[#F6F6F6] container bg-white`}

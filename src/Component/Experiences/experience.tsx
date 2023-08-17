@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import './styles.css';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { angular, bitbucket, ionic, react, tailwind, typescript } from '../../Assests';
 import ExperienceCard from '../ExpericenceCard/experiencecard';
-import { angular, ionic, typescript, tailwind, githubtech, git, react, bitbucket } from '../../Assests';
 import Tabbar from '../TabBar/tabbar';
+import './styles.css';
 
 const Experience = () => {
     const [width, setWidth] = useState(1501);
-    const [activeTab,SetActiveTab] = useState("Experience")
+    const [activeTab, SetActiveTab] = useState("Experience")
     const transition = { duration: 2, type: 'spring' };
 
     const handleResize = () => {
@@ -21,16 +21,16 @@ const Experience = () => {
     })
 
     return (
-        <div className='h-full lg:!h-screen flex items-center justify-center mx-auto pt-8'>
+        <div className='h-full lg:!min-h-screen flex items-center justify-center mx-auto'>
             <div className="flex h-full flex-col relative items-center justify-center w-full">
-                <motion.div 
-                 initial={{ opacity: 0 }}
-                 whileInView={{ opacity: 1 }}
-                 viewport={{ once: false }}
-                 transition={transition}
-                className='flex flex-col items-center justify-center py-8 w-full lg:ml-4'>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: false }}
+                    transition={transition}
+                    className='flex flex-col items-center justify-center py-8 w-full lg:ml-4'>
                     <span className='text-[1.5rem] sm:!text-[2rem] lg:!text-[3rem] text-[--orange] font-bold font-mova text-shadow'>Experience</span>
-                    <span className='text-[--gray] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] font-mova text-shadow'>Progressive Journey: From Past Achievements to Present Contributions</span>
+                    <span className='text-[--gray] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] font-mova text-shadow text-center'>Progressive Journey: From Past Achievements to Present Contributions</span>
                 </motion.div>
                 <div className='flex items-center justify-around gap-4 lg:!gap-8 w-full'>
                     <motion.div
@@ -76,7 +76,7 @@ const Experience = () => {
                         <span className='text-[--orange] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem]'>Work</span>
                     </motion.div>
                 </div>
-                <Tabbar tabName={["Experience","Education"]} changeTab={(activeTab:any)=>SetActiveTab(activeTab)}/>
+                <Tabbar tabName={["Experience", "Education"]} changeTab={(activeTab: any) => SetActiveTab(activeTab)} />
                 {activeTab === 'Experience' && <div className='flex w-full items-center justify-center relative mt-4'>
                     <div className='grid grid-cols-1 sm:!grid-cols-2 sm:!grid-rows-2  place-items-center w-full relative'>
                         <div className="blur right-0 bottom-0 !bg-purple-200"></div>
@@ -104,21 +104,6 @@ const Experience = () => {
                             </motion.div>
                         </div>
                         <div className="blur service-blur-left !bg-[#ABF1FF94]"></div>
-                        {/* <div className='hidden lg:!block absolute left-[50%] top-[20%] h-[70%]'>
-                    <div className='h-full w-full relative flex items-center flex-col'>
-                        <div className='h-16 w-16 flex items-center justify-center relative rounded-full'>
-                            <div className='h-full w-full bg-yellow-200 rounded-full'>
-                            </div>
-                            <div className='absolute h-10 w-10 bg-gradient-to-br from-orange-400 to-yellow-400 rounded-full flex items-center justify-center font-semibold text-white'>2</div>
-                        </div>
-                        <div className='h-full w-[2px] border-2 border-orange-500 border-dashed my-2'></div>
-                        <div className='h-16 w-16 flex items-center justify-center relative'>
-                            <div className='h-full w-full bg-yellow-200 rounded-full'>
-                            </div>
-                            <div className='absolute h-10 w-10 bg-gradient-to-br from-orange-400 to-yellow-400 rounded-full flex items-center justify-center font-semibold text-white'>1</div>
-                        </div>
-                    </div>
-                </div> */}
                         <div className='order-2 sm:order-2 sm:col-start-2 sm:row-start-2 w-full relative'>
                             <motion.div
                                 initial={{ opacity: 0, x: width < 1023 ? 40 : 160 }} // Initial animation values
@@ -144,8 +129,50 @@ const Experience = () => {
                         <div className="blur right-0 bottom-0 !bg-[#ABF1FF94]"></div>
                     </div>
                 </div>}
-                {activeTab === 'Education' && <div className='h-[50%] w-full relative'>
-                <div className='h-full w-[2px] border-2 border-orange-500 border-dashed my-2 absolute left-1/2'></div></div>
+                {activeTab === 'Education' && <div className='h-auto w-full relative mt-8 lg:!px-16'>
+                    <div className=' grid grid-cols-1 sm:!grid-cols-2  gap-x-12  gap-y-4 lg:!gap-y-8 w-auto'>
+                    <motion.div
+                initial={{ opacity: 0, y: 20 }} // Initial animation values
+                whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
+                transition={{ duration: 2 }}
+                         className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-md bg-gradient-to-r from-orange-100 to bg-yellow-100 gap-1 lg:!gap-4'>
+                            <p className='text-[--orange] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2018 - 2021 )</p>
+                            <p className='text-[--orange] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>B.E - Comp. Sci. </p>
+                            <p className='text-[--gray] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>College of Engineering , Malegaon</p>
+                            <p className='text-[--black] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center font-semibold'>76.91% (CGPA - 8.74)</p>
+                        </motion.div>
+                        <motion.div
+                initial={{ opacity: 0, y: 20 }} // Initial animation values
+                whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
+                transition={{ duration: 2 }} 
+                        className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-md bg-gradient-to-r from-orange-100 to bg-yellow-100 gap-1 lg:!gap-4'>
+                            <p className='text-[--orange] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2016 - 2018 )</p>
+                            <p className='text-[--orange] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>Diploma - Comp. Engg.</p>
+                            <p className='text-[--gray] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>SSPM's Ploytechnic College</p>
+                            <p className='text-[--black] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center font-semibold'>79.19%</p>
+                        </motion.div>
+                        <motion.div
+                initial={{ opacity: 0, y: 20 }} // Initial animation values
+                whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
+                transition={{ duration: 2 }} 
+                        className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-md bg-gradient-to-r from-orange-100 to bg-yellow-100 gap-1 lg:!gap-4'>
+                            <p className='text-[--orange] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2016 )</p>
+                            <p className='text-[--orange] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>HSC</p>
+                            <p className='text-[--gray] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>Gopinath Vidyalaya & Jr.College</p>
+                            <p className='text-[--black] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center font-semibold'>58.32%</p>
+                        </motion.div>
+                        <motion.div
+                initial={{ opacity: 0, y: 20 }} // Initial animation values
+                whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
+                transition={{ duration: 2 }} 
+                        className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-md bg-gradient-to-r from-orange-100 to bg-yellow-100 gap-1 lg:!gap-4'>
+                            <p className='text-[--orange] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2014 )</p>
+                            <p className='text-[--orange] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>SSC</p>
+                            <p className='text-[--gray] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>New English School</p>
+                            <p className='text-[--black] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center font-semibold'>80.00%</p>
+                        </motion.div>
+                    </div>
+                </div>
                 }
             </div>
         </div>

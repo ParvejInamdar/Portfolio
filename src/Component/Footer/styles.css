@@ -1,7 +1,6 @@
 .footer{
     display: flex;
     align-items: center;
-    /* margin: -0.5rem -3.5rem; */
     flex-direction: column;
     position: relative;
 }
