@@ -1,6 +1,4 @@
-import React from 'react';
-
-const SideBar = (props:any) => {
+const SideBar = (props: any) => {
     return (
         <div className=' h-full w-[80%] sm:!w-[60%] bg-gradient-to-b from-orange-300 to-yellow-300 flex flex-col p-6'>
             <div onClick={props.isOpen} className='bg-gray-200 rounded-md py-2 px-2 w-full items-center justify-center flex font-mova uppercase'> close </div>

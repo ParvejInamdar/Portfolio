@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './styles.css';
 const ExperienceCard = ({ technology,Location,join_date,leave_date,position,performed_task,organization_name,company_name,preference }: any) => {
 
