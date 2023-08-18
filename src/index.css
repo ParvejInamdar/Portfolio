@@ -44,21 +44,16 @@ code {
     monospace;
 }
 
-.nav-links::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 3px;
-  background: #292929;
-  margin: auto;
-  transition: 0.5s;
+::-webkit-scrollbar {
+  width: 16px;
 }
 
-.nav-links:hover::after {
-  width: 70%;
+::-webkit-scrollbar-thumb {
+  background-color: #fdfd96;
+  border-radius: 10px;
 }
 
-.diagonal-split-background{
-  background-color: #013A6B;
-  background-image: -webkit-linear-gradient(-40deg, #FFFFFF 60%, #F5F5F5 60%);
+::-webkit-scrollbar-track {
+  background-color: #FFE0B2;
+
 }

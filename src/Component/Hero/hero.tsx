@@ -7,10 +7,23 @@ import './styles.css';
 const Hero = () => {
     const transition = { duration: 2, type: 'spring' };
     const navigate = useNavigate();
+    const gitUserName = 'ParvejInamdar'
 
     const handleNavigate = () => {
         navigate('/hireme')
     };
+
+    // const openWhatsApp = () => {
+    //     window.open(`https://wa.me/${phoneNumber}`, '_blank');
+    // };
+
+    const openGithub = () => {
+        window.open(`https://github.com/${gitUserName}`, '_blank');
+      };
+
+    const openLinkedin = () => {
+        window.open('https://www.linkedin.com/in/parvej-inamdar-008725171', '_blank');
+    }
 
     return (
         <div className='flex flex-col-reverse lg:!flex-row items-center h-screen max-h-full relative w-full px-5 lg:!px-16'>
@@ -31,16 +44,16 @@ const Hero = () => {
                     viewport={{ once: true }}
                     transition={transition}
                     onClick={handleNavigate}
-                    className="button bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-white hover:to-white hover:text-yellow-500 border-2 border-yellow-500 text-white px-4 py-2 !flex !items-center !justify-center text-[1rem] sm:!text-[1.1rem] lg:!text-[1.3rem] rounded-full font-mova w-[10rem] mt-4 z-50">Hire me</motion.button>
+                    className="button bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-white hover:to-white hover:text-yellow-500 border-2 border-yellow-500 text-white px-4 py-2 !flex !items-center !justify-center text-[1rem] sm:!text-[1.1rem] lg:!text-[1.3rem] rounded-full font-mova w-[10rem] mt-4 z-40">Hire me</motion.button>
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: false }}
                     transition={transition}
                     className="flex items-center justify-center gap-8 mt-4 intro-icons p-2">
-                    <img src={github} alt='Github' className=' w-[2rem] h-[2rem]' />
-                    <img src={linkedin} alt='Github' className=' w-[2rem] h-[2rem]' />
-                    <img src={instagram} alt='Github' className=' w-[2rem] h-[2rem]' />
+                    <div onClick={openGithub}><img src={github} alt='Github' className=' w-[2.5rem] h-[2.5rem]' /></div>
+                    <div onClick={openLinkedin}><img src={linkedin} alt='Linkedin' className=' w-[2.5rem] h-[2.5rem]' /></div>
+                    {/* <div><img src={instagram} alt='Instagram' className=' w-[2.5rem] h-[2.5rem]' /></div> */}
                 </motion.div>
             </div>
             <div className='h-full w-full flex items-center justify-center  lg:!-mt-12 relative'>

@@ -78,7 +78,7 @@ function NavBar() {
     return (
         <div className={`absolute top-0 flex w-screen xl:!w-full items-center justify-between max-h-screen lg:!h-[10vh] ${colorChange ? 'bg-gradient-to-b from-orange-100 to-yellow-200 !shadow-lg' : ''}`}>
             <div className='h-full flex justify-start items-center'>
-                <div className='h-full flex items-start justify-start mix-blend-multiply xl:!hidden py-2 mx-2 sm:!mx-4' onClick={() => setIsOpen(true)}>
+                <div className='flex items-center justify-center mix-blend-multiply xl:!hidden py-2 mx-2 sm:!mx-4 z-50' onClick={() => setIsOpen(true)}>
                     <img src={hamburger} alt="" className='h-12 w-12' />
                 </div>
                 <motion.div
@@ -118,7 +118,7 @@ function NavBar() {
                 </div>
             </motion.div>
             {isOpen &&
-                <div className='h-screen w-full absolute top-0 left-0 z-100 bg-black/20 overflow-hidden'>
+                <div className='h-screen w-full absolute top-0 left-0 z-50 bg-black/20'>
                     <SideBar isOpen={() => setIsOpen(false)} scrollToSection={(id: any) => scrollToSection(id)} />
                 </div>}
         </div>

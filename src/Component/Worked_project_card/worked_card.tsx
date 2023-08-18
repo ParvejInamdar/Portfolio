@@ -13,17 +13,17 @@ const Worked_Card = ({ appName, appImage, playstoreLink, appstoreLink, webLink, 
     
     return (
         <motion.div
-            className={`flex flex-col h-[15rem] w-[20rem] shadow-xl relative px-2 py-2 rounded-lg bg-gradient-to-br from-[#E9E9E9] to-[#F6F6F6] container bg-white`}
+            className={`flex flex-col h-[13rem] w-[18rem] sm:!h-[15rem] sm:!w-[20rem] shadow-xl relative px-2 py-2 rounded-lg bg-gradient-to-br from-yellow-100 to-green-100 container`}
             animate={{ rotateY: isFlipped ? 180 : 0 }}
             transition={{ duration: 0.6 }}>
             {!isFlipped && <div className='flex items-center w-full justify-center py-2'>
-                <span className='font-poppins font-semibold text-[1rem] sm:!text-[1.5rem] lg:!text-[2rem] text-white text-center orange-text-shadow'>{appName}</span>
+                <span className='font-poppins font-semibold text-[1.5rem] lg:!text-[2rem] text-white text-center orange-text-shadow py-1'>{appName}</span>
             </div>}
             {!isFlipped && <div className='flex items-center justify-center'>
-                <div className='-ml-16 rounded-lg h-[8rem] w-[8rem] bg-white shadow-lg'>
+                <div className='-ml-20 lg:!-ml-16 rounded-lg h-[5rem] w-[5rem] lg:!h-[8rem] lg:!w-[8rem] bg-white border b-shadow'>
                     <img src={appImage} alt='' className='rounded-lg h-full w-full' />
                 </div>
-                <div className='px-8 h-full py-4 flex flex-col items-center justify-center gap-8'>
+                <div className='px-8 h-full py-4 flex flex-col items-center justify-center gap-6 lg:!gap-8'>
                     {webLink && <div className='flex cursor-pointer px-4'>
                         <img src={web} alt='Website' className='h-[25px] w-[25px] mx-2' />
                         <a className='font-mova font-medium text-[1rem] sm:!text-[1.3rem] text-[#E2A76F] text-shadow' target='_blank' href={appstoreLink}>Web</a>
@@ -45,7 +45,7 @@ const Worked_Card = ({ appName, appImage, playstoreLink, appstoreLink, webLink, 
                     className='flex flex-col h-full'
                     style={{ transform: 'scaleX(-1)' }}
                 >
-                    <span className='font-poppins font-semibold text-white text-[1rem] sm:!text-[1.5rem] lg:!text-[2rem] text-center py-2 orange-text-shadow'>Technology Used</span>
+                    <span className='font-poppins font-semibold text-white text-[1.5rem] lg:!text-[2rem] text-center py-2 orange-text-shadow'>Technology Used</span>
                     <div className='flex justify-around items-center w-full h-full mx-1 mb-8'>
                         {technology.map((item: any) => {
                             return <img src={item} alt='' className='h-[3rem] w-[3rem] hover:scale-110' />

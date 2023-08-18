@@ -1,4 +1,4 @@
-import { footerlinkedin, telegram, whatsapp } from '../../Assests';
+import { footerlinkedin, telegram, whatsapp, instagramcontact } from '../../Assests';
 import './styles.css';
 
 const Footer = () => {
@@ -16,26 +16,30 @@ const Footer = () => {
     const openLinkedin = () => {
         window.open('https://www.linkedin.com/in/parvej-inamdar-008725171', '_blank');
     }
+
     return (
-        <div className="footer h-[20vh] lg:!h-[30vh] bg-gradient-to-b from-orange-300 to-yellow-300">
-            <div className="footer-content h-full">
+        <div className="footer h-[20vh] lg:!h-[30vh] bg-gradient-to-b from-blue-100 to-green-300 relative">
+            <div className="font-mova  flex flex-col items-center justify-center gap-2 lg:!gap-4 h-full relavtive">
                 <span className='text-[--black] font-bold text-[1rem] sm:!text-[1.5rem] lg:!text-[2rem] font-mova text-shadow'>Let's Talk</span>
-                <div className="footer-icon">
+                <div className="flex gap-4">
                     {/* <div className='logo'>
                         <img src={footerinsta} alt='' />
                     </div> */}
-                    <div className='logo' onClick={openLinkedin}>
+                    <div className='logo h-[2.5rem] w-[2.5rem] lg:!h-[4rem] lg:!w-[4rem] cursor-pointer' onClick={openLinkedin}>
                         <img src={footerlinkedin} alt='' />
                     </div>
                     {/* <div className='logo'>
                         <img src={footerfacebook} alt='' />
                     </div> */}
-                    <div className='logo' onClick={openWhatsApp}>
+                    <div className='logo h-[2.5rem] w-[2.5rem] lg:!h-[4rem] lg:!w-[4rem] cursor-pointer' onClick={openWhatsApp}>
                         <img src={whatsapp} alt='' />
                     </div>
-                    <div className='logo' onClick={openTelegram}>
+                    <div className='logo h-[2.5rem] w-[2.5rem] lg:!h-[4rem] lg:!w-[4rem] cursor-pointer' onClick={openTelegram}>
                         <img src={telegram} alt='' />
                     </div>
+                    {/* <div className='logo' onClick={openTelegram}>
+                        <img src={instagramcontact} alt='' />
+                    </div> */}
                 </div>
                 <div>
                     <span className='text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] font-mova text-white text-shadow'>inamdarparvej@gmail.com</span>

@@ -11,14 +11,20 @@ const Experience = () => {
     const transition = { duration: 2, type: 'spring' };
 
     const handleResize = () => {
+        console.log("handle reszie")
         let width = window.innerWidth;
         setWidth(width);
         console.log("eidt", width)
     };
 
     useEffect(() => {
+        console.log("Useeffect called")
+        setWidth(window.innerWidth);
         window.addEventListener('resize', handleResize);
-    })
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    },[])
 
     return (
         <div className='h-full lg:!min-h-screen flex items-center justify-center mx-auto'>
@@ -131,45 +137,45 @@ const Experience = () => {
                 </div>}
                 {activeTab === 'Education' && <div className='h-auto w-full relative mt-8 lg:!px-16'>
                     <div className=' grid grid-cols-1 sm:!grid-cols-2  gap-x-12  gap-y-4 lg:!gap-y-8 w-auto'>
-                    <motion.div
-                initial={{ opacity: 0, y: 20 }} // Initial animation values
-                whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
-                transition={{ duration: 2 }}
-                         className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-md bg-gradient-to-r from-orange-100 to bg-yellow-100 gap-1 lg:!gap-4'>
-                            <p className='text-[--orange] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2018 - 2021 )</p>
-                            <p className='text-[--orange] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>B.E - Comp. Sci. </p>
-                            <p className='text-[--gray] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>College of Engineering , Malegaon</p>
-                            <p className='text-[--black] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center font-semibold'>76.91% (CGPA - 8.74)</p>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }} // Initial animation values
+                            whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
+                            transition={{ duration: 2 }}
+                            className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-tl-full rounded-br-full bg-gradient-to-tr from-orange-100 to-yellow-100 hover:!from-orange-200 hover:!to-yellow-200 gap-1 lg:!gap-4 relative'>
+                            <p className='text-[--orange] text-[1rem]  lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2018 - 2021 )</p>
+                            <p className='text-[--orange] font-mova text-[1rem]  lg:!text-[1.5rem] text-shadow text-center'>B.E - Comp. Sci. </p>
+                            <p className='text-[--gray] font-mova text-[1rem]  lg:!text-[1.5rem] text-shadow text-center'>College of Engineering , Malegaon</p>
+                            <p className='text-[--black] text-[1rem]  lg:!text-[1.5rem] text-shadow text-center font-semibold'>76.91% (CGPA - 8.74)</p>
                         </motion.div>
                         <motion.div
-                initial={{ opacity: 0, y: 20 }} // Initial animation values
-                whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
-                transition={{ duration: 2 }} 
-                        className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-md bg-gradient-to-r from-orange-100 to bg-yellow-100 gap-1 lg:!gap-4'>
-                            <p className='text-[--orange] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2016 - 2018 )</p>
-                            <p className='text-[--orange] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>Diploma - Comp. Engg.</p>
-                            <p className='text-[--gray] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>SSPM's Ploytechnic College</p>
-                            <p className='text-[--black] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center font-semibold'>79.19%</p>
+                            initial={{ opacity: 0, y: 20 }} // Initial animation values
+                            whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
+                            transition={{ duration: 2 }}
+                            className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-tl-full rounded-br-full bg-gradient-to-tr from-orange-100 to-yellow-100 hover:!from-orange-200 hover:!to-yellow-200 gap-1 lg:!gap-4'>
+                            <p className='text-[--orange] text-[1rem] lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2016 - 2018 )</p>
+                            <p className='text-[--orange] font-mova text-[1rem] lg:!text-[1.5rem] text-shadow text-center'>Diploma - Comp. Engg.</p>
+                            <p className='text-[--gray] font-mova text-[1rem] lg:!text-[1.5rem] text-shadow text-center'>SSPM's Ploytechnic College</p>
+                            <p className='text-[--black] text-[1rem] lg:!text-[1.5rem] text-shadow text-center font-semibold'>79.19%</p>
                         </motion.div>
                         <motion.div
-                initial={{ opacity: 0, y: 20 }} // Initial animation values
-                whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
-                transition={{ duration: 2 }} 
-                        className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-md bg-gradient-to-r from-orange-100 to bg-yellow-100 gap-1 lg:!gap-4'>
-                            <p className='text-[--orange] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2016 )</p>
-                            <p className='text-[--orange] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>HSC</p>
-                            <p className='text-[--gray] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>Gopinath Vidyalaya & Jr.College</p>
-                            <p className='text-[--black] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center font-semibold'>58.32%</p>
+                            initial={{ opacity: 0, y: 20 }} // Initial animation values
+                            whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
+                            transition={{ duration: 2 }}
+                            className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-tl-full rounded-br-full bg-gradient-to-tr from-orange-100 to-yellow-100 hover:!from-orange-200 hover:!to-yellow-200 gap-1 lg:!gap-4'>
+                            <p className='text-[--orange] text-[1rem] lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2016 )</p>
+                            <p className='text-[--orange] font-mova text-[1rem] lg:!text-[1.5rem] text-shadow text-center'>HSC</p>
+                            <p className='text-[--gray] font-mova text-[1rem] lg:!text-[1.5rem] text-shadow text-center'>Gopinath Vidyalaya & Jr.College</p>
+                            <p className='text-[--black] text-[1rem] lg:!text-[1.5rem] text-shadow text-center font-semibold'>58.32%</p>
                         </motion.div>
                         <motion.div
-                initial={{ opacity: 0, y: 20 }} // Initial animation values
-                whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
-                transition={{ duration: 2 }} 
-                        className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-md bg-gradient-to-r from-orange-100 to bg-yellow-100 gap-1 lg:!gap-4'>
-                            <p className='text-[--orange] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2014 )</p>
-                            <p className='text-[--orange] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>SSC</p>
-                            <p className='text-[--gray] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center'>New English School</p>
-                            <p className='text-[--black] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-shadow text-center font-semibold'>80.00%</p>
+                            initial={{ opacity: 0, y: 20 }} // Initial animation values
+                            whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
+                            transition={{ duration: 2 }}
+                            className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-tl-full rounded-br-full bg-gradient-to-tr from-orange-100 to-yellow-100 hover:!from-orange-200 hover:!to-yellow-200 gap-1 lg:!gap-4'>
+                            <p className='text-[--orange] text-[1rem] lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2014 )</p>
+                            <p className='text-[--orange] font-mova text-[1rem] lg:!text-[1.5rem] text-shadow text-center'>SSC</p>
+                            <p className='text-[--gray] font-mova text-[1rem] lg:!text-[1.5rem] text-shadow text-center'>New English School</p>
+                            <p className='text-[--black] text-[1rem] lg:!text-[1.5rem] text-shadow text-center font-semibold'>80.00%</p>
                         </motion.div>
                     </div>
                 </div>

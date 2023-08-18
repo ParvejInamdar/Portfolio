@@ -33,15 +33,15 @@ const ExperienceCard = ({ technology,Location,join_date,leave_date,position,perf
                         {position}
                     </div>
                     {technology && <div className='flex py-3 mx-2 justify-end items-end w-full'>
-                        {technology.map((item: any) => (
-                            <div className='h-[1.3rem] w-[1.3rem] lg:!h-[3rem] lg:!w-[3rem] mx-2'>
+                        {technology.map((item: any,index:any) => (
+                            <div key={index} className='h-[1.3rem] w-[1.3rem] lg:!h-[3rem] lg:!w-[3rem] mx-2'>
                                 <img src={item} alt='' />
                             </div>))}
                     </div>}
                 </div>
             </div>
             <div className={`absolute z-100 flex flex-col h-full w-full bg-green-100 pt-2 ${showFrontContent ? 'fade-in' : 'fade-out'}`}>
-                {performed_task.map((item:string,index:number)=><div className='h-[1.5rem] lg:!h-[2rem] w-full mx-2 my-1 flex items-center relative'>
+                {performed_task.map((item:string,index:number)=><div key={index} className='h-[1.5rem] lg:!h-[2rem] w-full mx-2 my-1 flex items-center relative'>
                     <div className='bg-blue-200 h-full px-1 flex items-center rounded-lg mr-1 font-semibold text-[--gray] text-[.8rem] lg:!text[1.5rem]'>{index <= 9 ? `0${index+1}` : index}</div>
                     <div className='bg-gradient-to-r from-orange-500 to-yellow-500 h-full pl-2 text-[.6rem] lg:!text-[1rem] flex items-center w-full font-mova text-shadow text-white rounded-lg mr-4'>{item}</div>
                 </div>)}
@@ -50,9 +50,6 @@ const ExperienceCard = ({ technology,Location,join_date,leave_date,position,perf
                 {!showFrontContent ? 'View more' : 'Back'}
             </div>
             <div className={`absolute left-0 top-0 bottom-0 w-[58%] lg:!w-[50%] bg-gradient-to-r from-orange-500 to-yellow-500 transform -skew-x-[25deg] origin-top-left -z-0 ${!showFrontContent ? 'fade-in' : 'fade-out'}`}></div>
-
-
-
         </div>
     )
 }

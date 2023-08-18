@@ -28,7 +28,7 @@ import tailwind from './img/tailwind.png';
 import git from './img/git.png';
 import githubtech from './img/github_tech.png';
 import bitbucket from './img/bitbucket.png';
-import junodating from  './img/juno_dating.webp';
+import junodating from './img/juno_dating.webp';
 import luxecrews from './img/luxecrews.png';
 import dawrat from './img/dawrat.jpg';
 import biz from './img/biz4.jpeg';
@@ -36,9 +36,14 @@ import techciti from './img/techciti.jpeg';
 import telegram from './img/telegram.png';
 import whatsapp from './img/whatsapp.png';
 import hamburger from './svg/hamburger_icon.svg'
+import backbutton from './img/backbutton.jpeg';
+import FeDev from './img/FEDev.gif';
+import portfolio3d from './img/portfolio3d.png';
+import instagramcontact from './img/instagramcontact.png';
 
 
 export {
     userImg1, userImg2, github, linkedin, instagram, vectorblue, vectorred, webdev, webdev2, webdev3, resume, footerwave, footerinsta, footerlinkedin, footerfacebook, playstore, appstore, web
-    , java, javascript, angular, mysql, react, typescript, ionic, tailwind, git, githubtech, bitbucket,junodating,luxecrews,dawrat,biz,techciti,telegram,whatsapp,hamburger
+    , java, javascript, angular, mysql, react, typescript, ionic, tailwind, git, githubtech, bitbucket, junodating, luxecrews, dawrat, biz, techciti, telegram, whatsapp, hamburger, FeDev, backbutton
+    , portfolio3d, instagramcontact
 };

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import 'swiper/css';
-import { angular, dawrat, ionic, java, javascript, junodating, luxecrews, mysql, react, tailwind, typescript } from '../../Assests/index';
+import { angular, dawrat, ionic, java, javascript, junodating, luxecrews, mysql, react, tailwind, typescript, portfolio3d } from '../../Assests/index';
 import Worked_Card from '../Worked_project_card/worked_card';
 import './styles.css';
 
@@ -8,7 +8,7 @@ const Portfolio = () => {
     const transition = { duration: 2, type: 'spring' };
 
     return (
-        <div className="h-full lg:!h-screen flex flex-col items-center justify-center w-full px-2 py-2">
+        <div className="h-full lg:!h-screen flex flex-col items-center justify-center w-full px-5 py-2">
             <div className="relative w-full mb-8">
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -59,7 +59,7 @@ const Portfolio = () => {
                     whileInView={{ opacity: 1, x: 0 }} // Animation when the card enters the viewport
                     transition={{ duration: 1.5 }}>
                     <Worked_Card
-                        appImage={dawrat}
+                        appImage={portfolio3d}
                         appName='Portfolio'
                         webLink='https://dawrat.com'
                         technology={[react, typescript, tailwind]}

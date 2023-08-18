@@ -3,13 +3,13 @@ import { Contact, Experience, Footer, Hero, NavBar, Portfolio, Services, Works }
 
 function Home() {
     return (
-        <div className='h-full w-full'>
+        <div className='h-full w-full relative'>
             <div className='sticky top-0 z-50'>
                 <NavBar />
             </div>
             <div className='App h-full w-screen max-w-screen flex items-center justify-center overflow-hidden lg:!-mx-[17px]'>
                 <div className='flex mx-auto items-center justify-center flex-col'>
-                    <div id="hero" className='w-full relative flex items-center justify-center bg-gradient-to-b from-yellow-100 to-orange-100 pt-8 xl:!pt-4 '>
+                    <div id="hero" className='w-full relative flex items-center justify-center bg-gradient-to-b from-blue-50 to-green-300 pt-8 xl:!pt-4 '>
                         <Hero />
                     </div>
                     <div id="service" className='relative w-full px-5 lg:!px-10 '>

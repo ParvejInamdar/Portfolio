@@ -15,7 +15,7 @@ const Contact = () => {
     const [userNameError, setUserNameError] = useState(false);
     const [emailError, setEmailError] = useState(false);
     const [userContactError, setUserContactError] = useState(false);
-    const transition = { duration: 2, type: 'spring' };
+    const transition = { duration: 4, type: 'spring' };
 
     const sendEmail = (e: any) => {
         e.preventDefault();
@@ -51,17 +51,19 @@ const Contact = () => {
     return (
         <div className="w-full flex flex-col lg:!flex-row items-center justify-around h-full lg:!h-screen py-6 z-100">
             <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: false }}
-                transition={transition}
+                initial={{ opacity: 0, y: 30 }} // Initial animation values
+                whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
+                transition={{ duration: 2 }}
                 className="w-full flex flex-col justify-start lg:!justify-center items-center lg:!items-start lg:!pl-16 py-4 lg:!mb-16 h-full">
-                <span className='text-[--orange] font-bold text-[1.5rem] sm:!text-[2rem] lg:!text-[3rem] font-mova text-shadow text-center'>Let's Build Something Together</span>
+                <span className='text-[--orange] font-bold text-[1.5rem] sm:!text-[2rem] lg:!text-[3rem] font-mova text-shadow text-center lg:!text-start'>Let's Build Something Together</span>
                 {/* <span className='text-[--yellow] font-bold text-[1rem] sm:!text-[1.5rem] lg:!text-[2rem] font-mova text-shadow'>Let's Build Something Together</span> */}
                 <span className='text-[--gray] font-bold text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] font-mova text-shadow pr-8 text-center lg:!text-start'>You need Beautiful designs for your website or You need to build Web Application Leave a Request</span>
                 <div className="blur !bg-[#c1f5ff] !top-[24rem] !w-[21rem] !h-[11rem] !-left-[10rem]"></div>
             </motion.div>
-            <div className="w-full contact-right flex items-center justify-center relative">
+            <motion.div
+                initial={{ opacity: 0, y: 30 }} // Initial animation values
+                whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
+                transition={{ duration: 2 }} className="w-full contact-right flex items-center justify-center relative">
                 <form ref={form} onSubmit={sendEmail} className='flex flex-col items-center font-mova w-full px-4 gap-4 mb-2'>
                     <div className='w-full'>
                         <input ref={username} type="text" name="user_name" className='user w-full' placeholder='Name*' onChange={(e) => {
@@ -89,7 +91,7 @@ const Contact = () => {
                     <div className='blur top-[1rem] right-2 bg-[--purple]'>
                     </div>
                 </form>
-            </div>
+            </motion.div>
         </div>
     )
 }

@@ -27,10 +27,10 @@
 }
 
 .logo{
-    height: 4rem;
-    width: 4rem;
+    /* height: 4rem;
+    width: 4rem; */
     transition: 0.2s;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .logo:hover{
