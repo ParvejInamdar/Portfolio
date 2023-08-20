@@ -36,7 +36,7 @@ const Hero = () => {
                     className="w-full flex flex-col items-center lg:!items-start justify-center gap-1">
                     <span className='text-[1.5rem] sm:!text-[2rem] lg:!text-[3rem] text-[--black] font-bold font-mova text-shadow'>Hi, I Am</span>
                     <span className='text-[1.5rem] sm:!text-[2rem] lg:!text-[3rem] text-[--orange] font-bold font-mova text-shadow effect-type'>Parvej Inamdar</span>
-                    <span className='text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-[--gray] font-[200] px-0 sm:!px-8 lg:!px-0 font-mova text-shadow'>Experienced Frontend Developer with a Passion for Perfecting Web Design and Development.Focused on Producing High-Quality, Interactive Web Solutions.</span>
+                    <span className='text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] text-[--gray] font-[200] px-0 sm:!px-8 lg:!px-0 font-mova text-shadow text-center lg:!text-start'>Experienced Frontend Developer with a Passion for Perfecting Web Design and Development.Focused on Producing High-Quality, Interactive Web Solutions.</span>
                 </motion.div>
                 <motion.button
                     initial={{ opacity: 0 }}
@@ -62,14 +62,14 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 30 }} // Initial animation values
                         whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
                         transition={{ duration: 2 }} // Animation duration
-                        className='h-[20rem] w-[20rem] sm:!h-[25rem] sm:!w-[25rem] lg:!w-[40rem] lg:!h-[40rem]'>
+                        className='h-[20rem] w-[20rem] sm:!h-[30rem] sm:!w-[30rem] lg:!w-[40rem] lg:!h-[40rem]'>
                         <img src={vectorblue} alt='Vector' />
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }} // Initial animation values
                         whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
                         transition={{ duration: 2 }} // Animation duration
-                        className='absolute z-100 mt-0 lg:!-mt-[5rem] -ml-[2rem] h-[10rem] w-[10rem] sm:!h-[15rem] sm:!w-[15rem] lg:!h-[25rem] lg:!w-[25rem]'>
+                        className='absolute z-100 mt-0 lg:!-mt-[5rem] -ml-[2rem] h-[10rem] w-[10rem] sm:!h-[20rem] sm:!w-[20rem] lg:!h-[25rem] lg:!w-[25rem]'>
                         <img src={userImg2} className='rounded-[45%]' alt='Vector' />
                     </motion.div>
                     <motion.div

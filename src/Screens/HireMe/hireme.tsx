@@ -62,9 +62,9 @@ const HireMe = () => {
     }
 
     return (
-        <div className='h-screen bg-gradient-to-br from-red-200 to-blue-200'>
+        <div className='h-auto min-h-screen bg-gradient-to-br from-red-200 to-blue-200'>
             <div className='absolute px-2 py-2 top-2 left-2 lg:!top-4 lg:!left-4 z-40 back-button' onClick={goBack}>
-                <img src={backbutton} alt="backbutton" className='h-[2rem] w-[2rem] lg:!h-[3rem] lg:!w-[3rem] rounded-full' />
+                <img src={backbutton} alt="backbutton" className='h-[2rem] w-[2rem] sm:!h-[2.5rem] sm:!w-[2.5rem] lg:!h-[3rem] lg:!w-[3rem] rounded-full' />
             </div>
             <motion.div
                 initial={{ opacity: 0, y: -30 }} // Initial animation values
