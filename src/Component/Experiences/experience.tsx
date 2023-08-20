@@ -84,13 +84,13 @@ const Experience = () => {
                 </div>
                 <Tabbar tabName={["Experience", "Education"]} changeTab={(activeTab: any) => SetActiveTab(activeTab)} />
                 {activeTab === 'Experience' && <div className='flex w-full items-center justify-center relative mt-4'>
-                    <div className='grid grid-cols-1 sm:!grid-cols-2 sm:!grid-rows-2  place-items-center w-full relative'>
+                    <div className='grid grid-cols-1 sm:!grid-cols-2 place-items-center place-content-center w-full relative'>
                         <div className="blur right-0 bottom-0 !bg-purple-200"></div>
-                        <div className='order-1 sm:order-1 sm:col-start-1 sm:row-start-1 w-full place-items-center relative'>
+                        <div className='order-1 sm:order-1 sm:col-start-1 sm:row-start-1 w-full relative flex justify-center items-center'>
                             <motion.div
-                                className='my-4 w-full h-[15rem] sm:!w-[21rem] sm:!h-[18rem] lg:!w-[30rem] lg:!h-[20rem]'
+                                className='my-4 w-full h-[15rem] sm:!w-[22rem] sm:!h-[16rem] lg:!w-[30rem] lg:!h-[20rem]'
                                 initial={{ opacity: 0, x: -40 }} // Initial animation values
-                                whileInView={{ opacity: 1, x: width < 1023 ? 0 : width > 1500 ? 80 : 40 }} // Animation when the card enters the viewport
+                                whileInView={{ opacity: 1, x: 0 }} // Animation when the card enters the viewport
                                 transition={{ duration: 2 }} // Animation duration
                                 key={4}
                             >
@@ -110,13 +110,13 @@ const Experience = () => {
                             </motion.div>
                         </div>
                         <div className="blur service-blur-left !bg-[#ABF1FF94]"></div>
-                        <div className='order-2 sm:order-2 sm:col-start-2 sm:row-start-2 w-full relative'>
+                        <div className='order-2 sm:order-2 sm:col-start-2 sm:row-start-2 w-full relative flex justify-center items-center'>
                             <motion.div
                                 initial={{ opacity: 0, x: width < 1023 ? 40 : 160 }} // Initial animation values
-                                whileInView={{ opacity: 1, x: width < 1023 ? 0 : width > 1500 ? 80 : 40 }} // Animation when the card enters the viewport
+                                whileInView={{ opacity: 1, x:0 }} // Animation when the card enters the viewport
                                 transition={{ duration: 2 }}
                                 key={5}
-                                className='my-4 w-full h-[15rem] sm:!w-[21rem] sm:!h-[18rem] lg:!w-[30rem] lg:!h-[20rem]'>
+                                className='my-4 w-full h-[15rem] sm:!w-[21rem] sm:!h-[16rem] lg:!w-[30rem] lg:!h-[20rem]'>
                                 <ExperienceCard
                                     key={7}
                                     organization_name={'Kinotis'}

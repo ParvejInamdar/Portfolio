@@ -69,7 +69,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 30 }} // Initial animation values
                         whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
                         transition={{ duration: 2 }} // Animation duration
-                        className='absolute z-100 lg:-mt-[5rem] -ml-[2rem] h-[10rem] w-[10rem] sm:!h-[15rem] sm:!w-[15rem] lg:!h-[25rem] lg:!w-[25rem]'>
+                        className='absolute z-100 mt-0 lg:!-mt-[5rem] -ml-[2rem] h-[10rem] w-[10rem] sm:!h-[15rem] sm:!w-[15rem] lg:!h-[25rem] lg:!w-[25rem]'>
                         <img src={userImg2} className='rounded-[45%]' alt='Vector' />
                     </motion.div>
                     <motion.div
@@ -87,7 +87,7 @@ const Hero = () => {
                         <FloatingDiv image={webdev2} texttitle={'Designer'} />
                     </motion.div>
                     <div className="blur !bg-[rgb(238,210,255)] right-0 top-12"></div>
-                    <div className="blur !bg-[#c1f5ff] bottom-16 left-0 !w-[21rem] !h-[11rem]"></div>
+                    <div className="blur !bg-[#be4d9a] bottom-16 left-0 !w-[21rem] !h-[11rem]"></div>
                 </div>
 
 

@@ -76,7 +76,7 @@ function NavBar() {
 
 
     return (
-        <div className={`absolute top-0 flex w-screen xl:!w-full items-center justify-between max-h-screen lg:!h-[10vh] ${colorChange ? 'bg-gradient-to-b from-orange-100 to-yellow-200 !shadow-lg' : ''}`}>
+        <div className={`absolute top-0 flex w-full xl:!w-full items-center justify-between max-h-screen lg:!h-[10vh] ${colorChange ? 'bg-gradient-to-b from-orange-100 to-yellow-200 !shadow-lg' : ''}`}>
             <div className='h-full flex justify-start items-center'>
                 <div className='flex items-center justify-center mix-blend-multiply xl:!hidden py-2 mx-2 sm:!mx-4 z-50' onClick={() => setIsOpen(true)}>
                     <img src={hamburger} alt="" className='h-12 w-12' />

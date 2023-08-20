@@ -9,7 +9,7 @@ const ExperienceCard = ({ technology,Location,join_date,leave_date,position,perf
     }
 
     return (
-        <div className="bg-gray-50 shadow-lg w-full h-full flex rounded-lg overflow-hidden relative">
+        <div className="bg-gray-50 shadow-lg w-full h-full flex rounded-lg overflow-hidden relative border">
             <div className={`flex h-full w-full ${!showFrontContent ? 'fade-in' : 'fade-out'}`} >
                 <div className='z-10 h-full w-full flex flex-col'>
                     <div className=' ml-3 mr-2 flex'>

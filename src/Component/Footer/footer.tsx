@@ -18,7 +18,7 @@ const Footer = () => {
     }
 
     return (
-        <div className="footer h-[20vh] lg:!h-[30vh] bg-gradient-to-b from-blue-100 to-green-300 relative">
+        <div className="footer h-[20vh] lg:!h-[30vh] bg-gradient-to-b from-orange-200 to-yellow-300 relative">
             <div className="font-mova  flex flex-col items-center justify-center gap-2 lg:!gap-4 h-full relavtive">
                 <span className='text-[--black] font-bold text-[1rem] sm:!text-[1.5rem] lg:!text-[2rem] font-mova text-shadow'>Let's Talk</span>
                 <div className="flex gap-4">

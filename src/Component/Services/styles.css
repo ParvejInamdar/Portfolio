@@ -5,12 +5,7 @@
     justify-content: center;
 }
 
-.right-service{
-    position: relative;
-    left:-4rem;
-}
-
 .service-blur-left{
     top:13rem;
-    left:-18rem;
+    left:0;
 }

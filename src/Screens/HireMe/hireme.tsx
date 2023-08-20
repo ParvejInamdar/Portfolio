@@ -67,7 +67,7 @@ const HireMe = () => {
                 <img src={backbutton} alt="backbutton" className='h-[2rem] w-[2rem] lg:!h-[3rem] lg:!w-[3rem] rounded-full' />
             </div>
             <motion.div
-                initial={{ opacity: 0, y: 30 }} // Initial animation values
+                initial={{ opacity: 0, y: -30 }} // Initial animation values
                 whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
                 transition={{ duration: 2 }}
                 className='h-full w-full px-2 sm:!px-16 lg:!px-48 py-16 relative'>
