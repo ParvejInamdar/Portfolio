@@ -100,7 +100,7 @@ const Experience = () => {
                                     company_name={'TAA LAB'}
                                     technology={[ionic, angular, typescript, tailwind]}
                                     Location={"Kuwait"}
-                                    join_date={'01/01/2023'}
+                                    join_date={'01/03/2023'}
                                     leave_date={"Present"}
                                     position={'Jr Web Developer'}
                                     preference={2}
@@ -123,7 +123,7 @@ const Experience = () => {
                                     company_name={'Biz4Solutions'}
                                     technology={[react, bitbucket]}
                                     Location={"Pune"}
-                                    join_date={'08/02/2022'}
+                                    join_date={'08/02/2021'}
                                     leave_date={"15/02/2022"}
                                     position={'Jr Programmer'}
                                     preference={1}
