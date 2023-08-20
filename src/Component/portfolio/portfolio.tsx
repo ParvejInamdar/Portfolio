@@ -21,7 +21,7 @@ const Portfolio = () => {
                 </motion.div>
                 <div className="blur right-5 !bg-blue-200"></div>
             </div>
-            <div className="grid grid-cols-1 lg:!grid-cols-3 gap-4 lg:!gap-20 relative">
+            <div className="grid grid-cols-1 sm:!grid-cols-2 lg:!grid-cols-3 gap-4 sm:!gap-12 lg:!gap-20 relative">
                 <motion.div initial={{ opacity: 0, x: -200 }} // Initial animation values
                     whileInView={{ opacity: 1, x: 0 }} // Animation when the card enters the viewport
                     transition={{ duration: 1.5 }}>

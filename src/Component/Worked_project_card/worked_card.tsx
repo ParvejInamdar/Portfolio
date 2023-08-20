@@ -13,7 +13,7 @@ const Worked_Card = ({ appName, appImage, playstoreLink, appstoreLink, webLink, 
 
     return (
         <motion.div
-            className={`flex flex-col h-[13rem] w-[18rem] sm:!h-[15rem] sm:!w-[20rem] shadow-xl relative px-2 py-2 rounded-lg bg-gradient-to-br from-yellow-100 to-green-100 container`}
+            className={`flex flex-col h-[13rem] w-[18rem] sm:!h-[15rem] sm:!w-[18rem] shadow-xl relative px-2 py-2 rounded-lg bg-gradient-to-br from-yellow-100 to-green-100 container`}
             animate={{ rotateY: isFlipped ? 180 : 0 }}
             transition={{ duration: 1 }}>
             {!isFlipped && <>
@@ -21,7 +21,7 @@ const Worked_Card = ({ appName, appImage, playstoreLink, appstoreLink, webLink, 
                     <span className='font-poppins font-semibold text-[1.5rem] lg:!text-[2rem] text-white text-center orange-text-shadow py-1'>{appName}</span>
                 </div>
                 <div className='flex items-center justify-center'>
-                    <div className='-ml-20 sm:!-ml-24 lg:!-ml-16 rounded-lg h-[5rem] w-[5rem] sm:!h-[6rem] sm:!w-[6rem] lg:!h-[8rem] lg:!w-[8rem] bg-white border b-shadow'>
+                    <div className='-ml-20 sm:!-ml-12 lg:!-ml-16 rounded-lg h-[5rem] w-[5rem] sm:!h-[6rem] sm:!w-[6rem] lg:!h-[8rem] lg:!w-[8rem] bg-white border b-shadow'>
                         <img src={appImage} alt='' className='rounded-lg h-full w-full' />
                     </div>
                     <div className='px-8 h-full py-4 flex flex-col items-center justify-center gap-6 lg:!gap-8'>

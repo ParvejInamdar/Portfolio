@@ -57,10 +57,8 @@ const Contact = () => {
                 className="w-full flex flex-col justify-start lg:!justify-center items-center lg:!items-start lg:!pl-16 py-4 lg:!mb-16 h-full">
                 <span className='text-[--orange] font-bold text-[1.5rem] sm:!text-[2rem] lg:!text-[3rem] font-mova text-shadow text-center lg:!text-start'>Let's Build Something Together</span>
                 {/* <span className='text-[--yellow] font-bold text-[1rem] sm:!text-[1.5rem] lg:!text-[2rem] font-mova text-shadow'>Let's Build Something Together</span> */}
-                <span className='text-[--gray] font-bold text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] font-mova text-shadow pr-8 text-center lg:!text-start'>You need Beautiful designs for your website or You need to build Web Application Leave a Request</span>
+                <span className='text-[--gray] font-bold text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] font-mova text-shadow pr-8 text-center lg:!text-start'>For Stunning Website Designs or Expert Web Application Development - Just Drop Us Your Request!</span>
             </motion.div>
-            <div className="blur !bg-[#c1f5ff] !top-[24rem] !w-[21rem] !h-[11rem] left-0"></div>
-
             <motion.div
                 initial={{ opacity: 0, y: 30 }} // Initial animation values
                 whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
@@ -89,10 +87,9 @@ const Contact = () => {
                         </div>
                     }
                     <input type='submit' value="Send" className='button bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-white hover:to-white hover:text-yellow-500 border-2 border-yellow-500 text-white px-4 py-2 !flex !items-center !justify-center text-[1rem] sm:!text-[1.1rem] lg:!text-[1.3rem] rounded-full font-mova w-1/2' />
+                    <div className="blur left-0 top-0 !bg-[#ABF1FF94]"></div>
                 </form>
             </motion.div>
-            <div className='blur top-[1rem] right-2 bg-[--purple]'>
-                    </div>
         </div>
     )
 }

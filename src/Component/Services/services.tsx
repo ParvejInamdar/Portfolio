@@ -5,7 +5,7 @@ import './styles.css';
 
 const Services = () => {
 
-    const transition = { duration: 3, type: 'spring' };
+    const transition = { duration: 4, type: 'spring' };
 
 
     return (

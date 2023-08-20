@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { angular, bitbucket, ionic, react, tailwind, typescript } from '../../Assests';
+import { angular, bitbucket, ionic, react, tailwind, typescript,githubtech } from '../../Assests';
 import ExperienceCard from '../ExpericenceCard/experiencecard';
 import Tabbar from '../TabBar/tabbar';
 import './styles.css';
@@ -136,6 +136,7 @@ const Experience = () => {
                     </div>
                 </div>}
                 {activeTab === 'Education' && <div className='h-auto w-full relative mt-8 lg:!px-16'>
+                <div className="blur right-0 bottom-0 !bg-purple-200"></div>
                     <div className=' grid grid-cols-1 sm:!grid-cols-2  gap-x-12  gap-y-4 lg:!gap-y-8 w-auto'>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }} // Initial animation values
@@ -178,6 +179,7 @@ const Experience = () => {
                             <p className='text-[--black] text-[1rem] lg:!text-[1.5rem] text-shadow text-center font-semibold'>80.00%</p>
                         </motion.div>
                     </div>
+                    <div className="blur left-0 top-0 !bg-[#ABF1FF94]"></div>
                 </div>
                 }
             </div>
