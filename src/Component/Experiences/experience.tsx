@@ -123,8 +123,8 @@ const Experience = () => {
                                     company_name={'Biz4Solutions'}
                                     technology={[react, bitbucket]}
                                     Location={"Pune"}
-                                    join_date={'08/02/2021'}
-                                    leave_date={"15/02/2022"}
+                                    join_date={'08/02/2022'}
+                                    leave_date={"15/02/2023"}
                                     position={'Jr Programmer'}
                                     preference={1}
                                     performed_task={['Created Clean and Complex Designs.', 'Developed new Features with clean and reusable code.', 'Implemented Crashlytics in the apps.', 'Integrated third party libraries.',
