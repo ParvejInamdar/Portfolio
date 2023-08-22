@@ -6,7 +6,7 @@ const Works = () => {
     const transition = { duration: 2, type: 'spring' };
 
     return (
-        <div className="flex h-full lg:!h-screen flex-col lg:!flex-row items-center justify-around">
+        <div className="flex h-full sm:!h-[60vh] lg:!h-screen flex-col lg:!flex-row items-center justify-around">
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}

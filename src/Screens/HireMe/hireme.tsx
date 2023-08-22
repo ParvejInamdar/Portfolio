@@ -62,7 +62,7 @@ const HireMe = () => {
     }
 
     return (
-        <div className='h-auto min-h-screen bg-gradient-to-br from-red-200 to-blue-200'>
+        <div className='h-auto xl:!h-screen min-h-screen bg-gradient-to-br from-red-200 to-blue-200 sm:!pt-12'>
             <div className='absolute px-2 py-2 top-2 left-2 lg:!top-4 lg:!left-4 z-40 back-button' onClick={goBack}>
                 <img src={backbutton} alt="backbutton" className='h-[2rem] w-[2rem] sm:!h-[2.5rem] sm:!w-[2.5rem] lg:!h-[3rem] lg:!w-[3rem] rounded-full' />
             </div>
@@ -71,8 +71,8 @@ const HireMe = () => {
                 whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
                 transition={{ duration: 2 }}
                 className='h-full w-full px-2 sm:!px-16 lg:!px-48 py-16 relative'>
-                <div className='flex flex-col lg:!flex-row border shadow-3d h-full w-full rounded-md'>
-                    <div className='min-h-[30vh] h-3/4 lg:!h-full w-full lg:!w-3/4 relative rounded-tl-md rounded-bl-md gap-4 z-50'>
+                <div className='flex flex-col xl:!flex-row border shadow-3d h-full w-full rounded-md'>
+                    <div className='min-h-[30vh] h-3/4 lg:!h-full w-full xl:!w-3/4 relative rounded-tl-md rounded-bl-md z-50'>
                         <img src={FeDev} alt='' className='absolute w-full h-full rounded-tl-md rounded-bl-md' />
                         <div className='absolute z-50 bg-gradient-to-t from-blue-500/30 to-green-500/30 h-full w-full py-4 px-8 rounded-tl-md rounded-bl-md'>
                             {/* <div className='text-[3.5rem] font-bold font-poppins text-shadow text-white'>Hire Me</div>

@@ -9,7 +9,7 @@ function Home() {
             </div>
             <div className='h-full w-full flex items-center justify-center overflow-hidden '>
                 <div className='flex mx-auto items-center justify-center flex-col'>
-                    <div id="hero" className='w-full relative flex items-center justify-center bg-gradient-to-b from-blue-50 to-green-300 pt-8 xl:!pt-4 '>
+                    <div id="hero" className='w-full relative flex items-center justify-center bg-gradient-to-b from-blue-50 to-green-300 xl:!bg-gradient-to-br xl:!from-blue-200 xl:!to-cyan-200 xl:!via-red-50 pt-8 xl:!pt-4 '>
                         <Hero />
                     </div>
                     <div id="service" className='relative w-full flex items-center justify-center px-5 lg:!px-10'>

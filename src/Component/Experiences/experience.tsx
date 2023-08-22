@@ -27,7 +27,7 @@ const Experience = () => {
     },[])
 
     return (
-        <div className='h-full lg:!min-h-screen flex items-center justify-center mx-auto'>
+        <div className='h-full sm:!min-h-[80vh] lg:!min-h-screen flex items-center justify-center mx-auto'>
             <div className="flex h-full flex-col relative items-center justify-center w-full">
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -142,7 +142,7 @@ const Experience = () => {
                             initial={{ opacity: 0, y: 20 }} // Initial animation values
                             whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
                             transition={{ duration: 2 }}
-                            className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-tl-full rounded-br-full bg-gradient-to-tr from-orange-100 to-yellow-100 hover:!from-orange-200 hover:!to-yellow-200 gap-1 lg:!gap-4 relative'>
+                            className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-tl-full rounded-br-full bg-gradient-to-tr from-orange-100 to-yellow-100 hover:!from-orange-200 hover:!to-yellow-200 gap-1 lg:!gap-4 relative hover:shadow-2xl hover:!-translate-y-1'>
                             <p className='text-[--orange] text-[1rem]  lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2018 - 2021 )</p>
                             <p className='text-[--orange] font-mova text-[1rem]  lg:!text-[1.5rem] text-shadow text-center'>B.E - Comp. Sci. </p>
                             <p className='text-[--gray] font-mova text-[1rem]  lg:!text-[1.5rem] text-shadow text-center'>College of Engineering , Malegaon</p>
@@ -152,7 +152,7 @@ const Experience = () => {
                             initial={{ opacity: 0, y: 20 }} // Initial animation values
                             whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
                             transition={{ duration: 2 }}
-                            className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-tl-full rounded-br-full bg-gradient-to-tr from-orange-100 to-yellow-100 hover:!from-orange-200 hover:!to-yellow-200 gap-1 lg:!gap-4'>
+                            className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-tl-full rounded-br-full bg-gradient-to-tr from-orange-100 to-yellow-100 hover:!from-orange-200 hover:!to-yellow-200 gap-1 lg:!gap-4 hover:shadow-2xl hover:!-translate-y-1'>
                             <p className='text-[--orange] text-[1rem] lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2016 - 2018 )</p>
                             <p className='text-[--orange] font-mova text-[1rem] lg:!text-[1.5rem] text-shadow text-center'>Diploma - Comp. Engg.</p>
                             <p className='text-[--gray] font-mova text-[1rem] lg:!text-[1.5rem] text-shadow text-center'>SSPM's Ploytechnic College</p>
@@ -162,7 +162,7 @@ const Experience = () => {
                             initial={{ opacity: 0, y: 20 }} // Initial animation values
                             whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
                             transition={{ duration: 2 }}
-                            className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-tl-full rounded-br-full bg-gradient-to-tr from-orange-100 to-yellow-100 hover:!from-orange-200 hover:!to-yellow-200 gap-1 lg:!gap-4'>
+                            className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-tl-full rounded-br-full bg-gradient-to-tr from-orange-100 to-yellow-100 hover:!from-orange-200 hover:!to-yellow-200 gap-1 lg:!gap-4 hover:shadow-2xl hover:!-translate-y-1'>
                             <p className='text-[--orange] text-[1rem] lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2016 )</p>
                             <p className='text-[--orange] font-mova text-[1rem] lg:!text-[1.5rem] text-shadow text-center'>HSC</p>
                             <p className='text-[--gray] font-mova text-[1rem] lg:!text-[1.5rem] text-shadow text-center'>Gopinath Vidyalaya & Jr.College</p>
@@ -172,7 +172,7 @@ const Experience = () => {
                             initial={{ opacity: 0, y: 20 }} // Initial animation values
                             whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
                             transition={{ duration: 2 }}
-                            className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-tl-full rounded-br-full bg-gradient-to-tr from-orange-100 to-yellow-100 hover:!from-orange-200 hover:!to-yellow-200 gap-1 lg:!gap-4'>
+                            className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-tl-full rounded-br-full bg-gradient-to-tr from-orange-100 to-yellow-100 hover:!from-orange-200 hover:!to-yellow-200 gap-1 lg:!gap-4 hover:shadow-2xl hover:!-translate-y-1'>
                             <p className='text-[--orange] text-[1rem] lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2014 )</p>
                             <p className='text-[--orange] font-mova text-[1rem] lg:!text-[1.5rem] text-shadow text-center'>SSC</p>
                             <p className='text-[--gray] font-mova text-[1rem] lg:!text-[1.5rem] text-shadow text-center'>New English School</p>

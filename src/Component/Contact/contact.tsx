@@ -49,7 +49,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="w-full flex flex-col lg:!flex-row items-center justify-around h-full lg:!h-screen py-6 z-100">
+        <div className="w-full flex flex-col lg:!flex-row items-center justify-around h-full sm:!h-[50vh] lg:!h-screen py-6 z-100 sm:mb-16 lg:!mb-0">
             <motion.div
                 initial={{ opacity: 0, y: 30 }} // Initial animation values
                 whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport

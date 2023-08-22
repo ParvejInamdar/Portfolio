@@ -28,9 +28,9 @@
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .orange-text-shadow {
-  text-shadow: 4px 4px 6px rgba(239, 145, 22, 0.706);
+  text-shadow: 8px 8px 12px rgba(239, 145, 22, 0.706);
 }
