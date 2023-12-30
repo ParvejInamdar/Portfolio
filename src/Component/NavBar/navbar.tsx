@@ -86,7 +86,7 @@ function NavBar() {
                     whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
                     transition={{ duration: 2 }} // Animation duration
                     className='z-100 xl:!px-10 cursor-pointer hidden xl:!flex'>
-                    <div className='font-mova'>
+                    <div className='font-mova' onClick={()=>scrollToSection('hero')}>
                         <span className='text-shadow text-[1.8rem] text-opacity-30'>
                             {text.split('').map((char, index) => (
                                 <span

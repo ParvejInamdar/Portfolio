@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { github, instagram, linkedin, userImg2, vectorblue, webdev, webdev2 } from '../../Assests';
+import { github, instagram, linkedin, userImg2, vectorblue, webdev, webdev2, leetcode } from '../../Assests';
 import FloatingDiv from '../FloatingDiv/floatingdiv';
 import './styles.css';
 
@@ -23,6 +23,10 @@ const Hero = () => {
 
     const openLinkedin = () => {
         window.open('https://www.linkedin.com/in/parvej-inamdar-008725171', '_blank');
+    }
+
+    const openLeetCode = () => {
+        window.open('https://leetcode.com/ParvejInamdar/', '_blank');
     }
 
     return (
@@ -53,6 +57,7 @@ const Hero = () => {
                     className="flex items-center justify-center gap-8 mt-4 intro-icons p-2">
                     <div onClick={openGithub}><img src={github} alt='Github' className=' w-[2.5rem] h-[2.5rem]' /></div>
                     <div onClick={openLinkedin}><img src={linkedin} alt='Linkedin' className=' w-[2.5rem] h-[2.5rem]' /></div>
+                    <div onClick={openLeetCode}><img src={leetcode} alt='Linkedin' className=' w-[2.5rem] h-[2.5rem]' /></div>
                     {/* <div><img src={instagram} alt='Instagram' className=' w-[2.5rem] h-[2.5rem]' /></div> */}
                 </motion.div>
             </div>

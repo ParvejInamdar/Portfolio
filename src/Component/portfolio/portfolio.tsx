@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import 'swiper/css';
 import { angular, dawrat, ionic, java, javascript, junodating, luxecrews, mysql, react, tailwind, typescript, portfolio3d } from '../../Assests/index';
-import Worked_Card from '../Worked_project_card/worked_card';
+import WorkedCard from '../Worked_project_card/worked_card';
 import './styles.css';
 
 const Portfolio = () => {
@@ -25,29 +25,17 @@ const Portfolio = () => {
                 <motion.div initial={{ opacity: 0, x: -200 }} // Initial animation values
                     whileInView={{ opacity: 1, x: 0 }} // Animation when the card enters the viewport
                     transition={{ duration: 1.5 }}>
-                    <Worked_Card
-                        appImage={junodating}
-                        appName='Juno Dating'
-                        playstoreLink='https://play.google.com/store/apps/details?id=com.junodatingapp'
-                        appstoreLink='https://apps.apple.com/us/app/junodating/id1582585894'
-                        technology={[react, javascript, java, mysql]}
+                    <WorkedCard
+                        appImage={portfolio3d}
+                        appName='Portfolio'
+                        webLink='https://parvejinamdar.vercel.app'
+                        technology={[react, typescript, tailwind]}
                     />
                 </motion.div>
                 <motion.div initial={{ opacity: 0, x: -200 }} // Initial animation values
                     whileInView={{ opacity: 1, x: 0 }} // Animation when the card enters the viewport
                     transition={{ duration: 1.5 }}>
-                    <Worked_Card
-                        appImage={luxecrews}
-                        appName='LuxeCrews'
-                        playstoreLink='https://play.google.com/store/apps/details?id=com.luxecrews.app'
-                        appstoreLink='https://apps.apple.com/us/app/luxecrews/id1576654608'
-                        technology={[react, javascript, java, mysql]}
-                    />
-                </motion.div>
-                <motion.div initial={{ opacity: 0, x: -200 }} // Initial animation values
-                    whileInView={{ opacity: 1, x: 0 }} // Animation when the card enters the viewport
-                    transition={{ duration: 1.5 }}>
-                    <Worked_Card
+                    <WorkedCard
                         appImage={dawrat}
                         appName='Dawrat'
                         webLink='https://dawrat.com'
@@ -58,11 +46,23 @@ const Portfolio = () => {
                 <motion.div initial={{ opacity: 0, x: -200 }} // Initial animation values
                     whileInView={{ opacity: 1, x: 0 }} // Animation when the card enters the viewport
                     transition={{ duration: 1.5 }}>
-                    <Worked_Card
-                        appImage={portfolio3d}
-                        appName='Portfolio'
-                        webLink='https://dawrat.com'
-                        technology={[react, typescript, tailwind]}
+                    <WorkedCard
+                        appImage={luxecrews}
+                        appName='LuxeCrews'
+                        playstoreLink='https://play.google.com/store/apps/details?id=com.luxecrews.app'
+                        appstoreLink='https://apps.apple.com/us/app/luxecrews/id1576654608'
+                        technology={[react, javascript, java, mysql]}
+                    />
+                </motion.div>
+                <motion.div initial={{ opacity: 0, x: -200 }} // Initial animation values
+                    whileInView={{ opacity: 1, x: 0 }} // Animation when the card enters the viewport
+                    transition={{ duration: 1.5 }}>
+                    <WorkedCard
+                        appImage={junodating}
+                        appName='Juno Dating'
+                        playstoreLink='https://play.google.com/store/apps/details?id=com.junodatingapp'
+                        appstoreLink='https://apps.apple.com/us/app/junodating/id1582585894'
+                        technology={[react, javascript, java, mysql]}
                     />
                 </motion.div>
             </div>

@@ -57,7 +57,7 @@ const Contact = () => {
                 className="w-full flex flex-col justify-start lg:!justify-center items-center lg:!items-start lg:!pl-16 py-4 lg:!mb-16 h-full">
                 <span className='text-[--orange] font-bold text-[1.5rem] sm:!text-[2rem] lg:!text-[3rem] font-mova text-shadow text-center lg:!text-start'>Let's Build Something Together</span>
                 {/* <span className='text-[--yellow] font-bold text-[1rem] sm:!text-[1.5rem] lg:!text-[2rem] font-mova text-shadow'>Let's Build Something Together</span> */}
-                <span className='text-[--gray] font-bold text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] font-mova text-shadow pr-8 text-center lg:!text-start'>For Stunning Website Designs or Expert Web Application Development - Just Drop Us Your Request!</span>
+                <span className='text-[--gray] font-bold text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] font-mova text-shadow pr-8 text-center lg:!text-start'>For Stunning Website Designs or Expert Web Application Development - Just Drop Your Request!</span>
             </motion.div>
             <motion.div
                 initial={{ opacity: 0, y: 30 }} // Initial animation values

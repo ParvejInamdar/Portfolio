@@ -29,12 +29,12 @@ const ExperienceCard = ({ technology,Location,join_date,leave_date,position,perf
                 </div>
                 <div className='w-full relative h-full flex flex-col items-center justify-center'>
                     <div className='absolute right-5 top-5 text-[--orange] text-[1rem] lg:!text-[1.3rem] font-arenq text-shadow font-semibold'>{company_name}</div>
-                    <div className='w-full text-[--black] text-[17px] sm:!text-[1.1rem] lg:!text-[1.8rem] font-overcameOutline font-semibold text-shadow pb-1 flex items-end justify-end pr-2 lg:!pr-4'>
+                    <div className='w-full text-[--black] text-[17px] sm:!text-[1.1rem] lg:!text-[1.8rem] font-overcameOutline font-semibold text-shadow pb-1 flex items-end justify-end pr-2 lg:!pr-3'>
                         {position}
                     </div>
-                    {technology && <div className='flex py-3 mx-2 justify-end items-end w-full'>
+                    {technology && <div className='py-3 mx-2 justify-end items-end w-full grid grid-cols-4'>
                         {technology.map((item: any,index:any) => (
-                            <div key={index} className='h-[1.3rem] w-[1.3rem] lg:!h-[3rem] lg:!w-[3rem] mx-2'>
+                            <div key={index} className='h-[1.3rem] w-[1.3rem] lg:!h-[2.5rem] lg:!w-[2.5rem] m-2'>
                                 <img src={item} alt='' />
                             </div>))}
                     </div>}

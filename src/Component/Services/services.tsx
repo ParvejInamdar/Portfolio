@@ -1,15 +1,13 @@
 import { motion } from 'framer-motion';
-import { resume, webdev, webdev2, webdev3 } from '../../Assests';
+import { github, resume, webdev, webdev2, webdev3, react, angular, tailwind, typescript, bitbucket, javascript, githubtech, python,ionic } from '../../Assests';
 import Card from '../Card/card';
 import './styles.css';
 
 const Services = () => {
-
     const transition = { duration: 4, type: 'spring' };
 
-
     return (
-        <div className="flex flex-col lg:!flex-row h-full sm:!h-[60vh] lg:!h-screen mt-8 py-2 lg:!mt-0 w-full items-center justify-center relative ml-0 lg:!ml-8">
+        <div className="flex flex-col lg:!flex-row h-full sm:!h-[75vh] lg:!h-screen mt-8 py-2 lg:!mt-0 w-full items-center justify-center relative ml-0 lg:!ml-8">
             <div
                 className="flex flex-col items-center justify-center lg:!items-start h-full w-full">
                 <span className='text-[--orange] font-bold text-[1.5rem] sm:!text-[2rem] lg:!text-[3rem] font-mova text-shadow'>Services</span>
@@ -25,6 +23,17 @@ const Services = () => {
                         Download CV
                     </button>
                 </a>
+                <div className='py-6 grid grid-cols-4 sm:!grid-cols-8'>
+                    <img src={react} alt='' className='px-4 my-2 h-12 transition-transform duration-200 hover:scale-110' />
+                    <img src={angular} alt='' className='px-4 my-2 h-12 transition-transform duration-200 hover:scale-110' />
+                    <img src={ionic} alt='' className='px-4 my-2 h-12 transition-transform duration-200 hover:scale-110' />
+                    <img src={javascript} alt='' className='px-4 my-2 h-12 transition-transform duration-200 hover:scale-110' />
+                    <img src={typescript} alt='' className='px-4 my-2 h-12 transition-transform duration-200 hover:scale-110' />
+                    <img src={python} alt='' className='px-4 my-2 h-12 transition-transform duration-200 hover:scale-110' />
+                    <img src={tailwind} alt='' className='px-4 my-2 h-12 transition-transform duration-200 hover:scale-110' />
+                    <img src={githubtech} alt='' className='px-4 my-2 h-12 transition-transform duration-200 hover:scale-110' />
+                    <img src={bitbucket} alt='' className='px-4 my-2 h-12 transition-transform duration-200 hover:scale-110' />
+                </div>
                 <div className="blur service-blur-left !bg-[#ABF1FF94]"></div>
             </div>
             <div className="flex items-center justify-center w-full h-full relative">

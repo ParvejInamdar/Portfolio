@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { angular, bitbucket, ionic, react, tailwind, typescript,githubtech } from '../../Assests';
+import { angular, bitbucket, ionic, react, tailwind, typescript,githubtech, javascript, html, css } from '../../Assests';
 import ExperienceCard from '../ExpericenceCard/experiencecard';
 import Tabbar from '../TabBar/tabbar';
 import './styles.css';
@@ -18,7 +18,6 @@ const Experience = () => {
     };
 
     useEffect(() => {
-        console.log("Useeffect called")
         setWidth(window.innerWidth);
         window.addEventListener('resize', handleResize);
         return () => {
@@ -98,13 +97,13 @@ const Experience = () => {
                                     key={6}
                                     organization_name={'Dawrat'}
                                     company_name={'TAA LAB'}
-                                    technology={[ionic, angular, typescript, tailwind]}
+                                    technology={[ionic, angular, typescript,html, tailwind,css,githubtech]}
                                     Location={"Kuwait"}
                                     join_date={'01/03/2023'}
                                     leave_date={"Present"}
-                                    position={'Jr Web Developer'}
+                                    position={'Web Developer'}
                                     preference={2}
-                                    performed_task={['Created Clean and Complex Designs.', 'Developed new Features with clean and reusable code.', 'Converted Angular component into Ionic', 'Integrated third party libraries.',
+                                    performed_task={['Creating Clean, Complex and Responsive Designs.', 'Developing new Features with clean and reusable code.', 'Creating new Components', 'Integrating third party libraries.',
                                         'Bug Fixing and API Integration.']}
                                 />
                             </motion.div>
@@ -121,7 +120,7 @@ const Experience = () => {
                                     key={7}
                                     organization_name={'Kinotis'}
                                     company_name={'Biz4Solutions'}
-                                    technology={[react, bitbucket]}
+                                    technology={[react,javascript,typescript,html,css, bitbucket]}
                                     Location={"Pune"}
                                     join_date={'08/02/2022'}
                                     leave_date={"15/02/2023"}

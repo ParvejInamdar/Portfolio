@@ -40,10 +40,13 @@ import backbutton from './img/backbutton.jpeg';
 import FeDev from './img/FEDev.gif';
 import portfolio3d from './img/portfolio3d.png';
 import instagramcontact from './img/instagramcontact.png';
-
+import python from './img/python.png';
+import html from './img/html.png';
+import css from './img/css.png';
+import leetcode from './img/leetcode.svg';
 
 export {
     userImg1, userImg2, github, linkedin, instagram, vectorblue, vectorred, webdev, webdev2, webdev3, resume, footerwave, footerinsta, footerlinkedin, footerfacebook, playstore, appstore, web
     , java, javascript, angular, mysql, react, typescript, ionic, tailwind, git, githubtech, bitbucket, junodating, luxecrews, dawrat, biz, techciti, telegram, whatsapp, hamburger, FeDev, backbutton
-    , portfolio3d, instagramcontact
+    , portfolio3d, instagramcontact, python, html, css, leetcode
 };
