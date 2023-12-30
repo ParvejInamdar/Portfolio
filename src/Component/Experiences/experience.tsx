@@ -155,7 +155,7 @@ const Experience = () => {
                             className='flex flex-col items-center justify-center px-8 py-4 shadow-lg border rounded-tl-full rounded-br-full bg-gradient-to-tr from-orange-100 to-yellow-100 hover:!from-orange-200 hover:!to-yellow-200 gap-1 lg:!gap-4 hover:shadow-2xl hover:!-translate-y-1'>
                             <p className='text-[--orange] text-[1rem] lg:!text-[1.5rem] text-shadow font-semibold text-white text-center'>( 2016 - 2018 )</p>
                             <p className='text-[--orange] font-mova text-[1rem] lg:!text-[1.5rem] text-shadow text-center'>Diploma - Comp. Engg.</p>
-                            <p className='text-[--gray] font-mova text-[1rem] lg:!text-[1.5rem] text-shadow text-center'>SSPM's Ploytechnic College</p>
+                            <p className='text-[--gray] font-mova text-[1rem] lg:!text-[1.5rem] text-shadow text-center'>SSPM's Polytechnic College</p>
                             <p className='text-[--black] text-[1rem] lg:!text-[1.5rem] text-shadow text-center font-semibold'>79.19%</p>
                         </motion.div>
                         <motion.div
