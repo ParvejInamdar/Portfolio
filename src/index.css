@@ -45,12 +45,14 @@ code {
 }
 
 ::-webkit-scrollbar {
-  width: 16px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #f7f7ce;
+  background-color: #f6cb6e;
   border-radius: 10px;
+  width: 4px !; /* Adjust the width as needed */
+
 }
 
 ::-webkit-scrollbar-track {
