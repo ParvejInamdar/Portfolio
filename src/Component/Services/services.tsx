@@ -46,7 +46,7 @@ const Services = () => {
         <div className="flex flex-col lg:!flex-row h-full sm:!h-[75vh] lg:!h-screen mt-8 py-2 lg:!mt-0 w-full items-center justify-center relative ml-0 lg:!ml-8">
             <div
                 className="flex flex-col items-center justify-center lg:!items-start h-full w-full">
-                <span className='text-[--orange] font-bold text-[1.5rem] sm:!text-[2rem] lg:!text-[3rem] font-mova text-shadow'>Services</span>
+                <span className='text-[--orange] font-bold lg:!opacity-30 text-[1.5rem] sm:!text-[2rem] lg:!text-[6rem] font-mova'>Skills</span>
                 <motion.span
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
