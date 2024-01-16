@@ -62,7 +62,7 @@ const Contact = () => {
             <motion.div
                 initial={{ opacity: 0, y: 30 }} // Initial animation values
                 whileInView={{ opacity: 1, y: 0 }} // Animation when the card enters the viewport
-                transition={{ duration: 2 }} className="w-full contact-right flex items-center justify-center relative">
+                transition={{ duration: 2 }} className="w-full contact-right flex items-center justify-center relative p-5 rounded-xl shadow-2xl bg-gradient-to-bl from-yellow-100 to-orange-300 lg:!p-0 lg:!shadow-none lg:!bg-none">
                 <form ref={form} onSubmit={sendEmail} className='flex flex-col items-center font-mova w-full px-4 gap-4 mb-2'>
                     <div className='w-full'>
                         <input ref={username} type="text" name="user_name" className='user w-full' placeholder='Name*' onChange={(e) => {

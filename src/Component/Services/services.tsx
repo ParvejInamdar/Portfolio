@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
-import { github, resume, webdev, webdev2, webdev3, react, angular, tailwind, typescript, bitbucket, javascript, githubtech, python, ionic, git, html, css, node, mongo, mysql } from '../../Assests';
+import { resume} from '../../Assests';
 import Card from '../Card/card';
 import './styles.css';
 import { useState } from 'react';
+import { skills } from '../../Constants';
 
 const Services = () => {
     const transition = { duration: 4, type: 'spring' };
@@ -28,7 +29,7 @@ const Services = () => {
     }
 
     const zoomout = (idname: string) => {
-        if(idname !== prevId){
+        if (idname !== prevId) {
             let item = document.getElementById(idname);
             item?.classList.remove('scale-100');
             item?.classList.add('scale-110', 'transition-transform', 'duration-200');
@@ -54,80 +55,47 @@ const Services = () => {
                     transition={transition}
                     className='text-[--gray] text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] font-mova text-shadow px-0 sm:!px-4 lg:!px-0 text-center lg:!text-start'
                 >As a designer and developer, I help companies to build amazing websites and web applications that are easy to use</motion.span>
-                <a href={resume} download={'Parvej_Inamdar_CV_8421839883'} className='!w-[8rem]'>
+                <a href={resume} download={'Parvej_Inamdar_CV_8421839883'} className='!w-[9rem]'>
                     <button className='button bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-white hover:to-white hover:text-yellow-500 border-2 border-yellow-500 text-white px-4 py-2 !flex !items-center !justify-center text-[1rem] sm:!text-[1.1rem] lg:!text-[1.3rem] rounded-full font-mova w-[10rem] mt-4'>
                         Download CV
                     </button>
                 </a>
-                <div className='w-full flex items-center justify-center lg:!justify-start text-[--orange] font-bold text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] font-mova text-shadow my-5 capitalize'>
-                    {techName}
-                </div>
+                {/* <div className='w-full flex items-center justify-center lg:!justify-start text-[--orange] font-bold text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem] font-mova text-shadow my-5'>
+                    <span className='border-b-4 capitalize rounded-br-md border-gradient-to-t from-yellow-500 to-orange-500'>{techName}</span>
+                </div> */}
                 <div className="blur service-blur-left !bg-[#ABF1FF94]"></div>
             </div>
             <div className="flex flex-col items-center justify-center w-full h-full relative">
-                <div className='w-full px-5 flex flex-col items-center justify-center'>
-                    <div className='flex items-center justify-center w-full -mb-4'>
-                        <div id='node' onClick={() => setTechnologyName('Node js', 'node')} onMouseEnter={() => zoomout('node')} onMouseLeave={() => zoomin('node')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2'>
-                            <img src={node} alt='' className='-rotate-45' />
-                        </div>
-                        <div id='html' onClick={() => setTechnologyName('html', 'html')} onMouseEnter={() => zoomout('html')} onMouseLeave={() => zoomin('html')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2'>
-                            <img src={html} alt='' className='-rotate-45' />
-                        </div>
-                        <div id='css' onClick={() => setTechnologyName('CSS', 'css')} onMouseEnter={() => zoomout('css')} onMouseLeave={() => zoomin('css')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2'>
-                            <img src={css} alt='' className='-rotate-45' />
-                        </div>
-                    </div>
-                    <div className='flex items-center justify-center w-full -mb-4'>
-                        <div id='python' onClick={() => setTechnologyName('python', 'python')} onMouseEnter={() => zoomout('python')} onMouseLeave={() => zoomin('python')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2'>
-                            <img src={python} alt='' className='-rotate-45' />
-                        </div>
-                        <div id='tailwind' onClick={() => setTechnologyName('tailwind', 'tailwind')} onMouseEnter={() => zoomout('tailwind')} onMouseLeave={() => zoomin('tailwind')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2'>
-                            <img src={tailwind} alt='' className='-rotate-45' />
-                        </div>
-                        <div id='ionic' onClick={() => setTechnologyName('ionic', 'ionic')} onMouseEnter={() => zoomout('ionic')} onMouseLeave={() => zoomin('ionic')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2'>
-                            <img src={ionic} alt='' className='-rotate-45' />
-                        </div>
-                        <div id='angular' onClick={() => setTechnologyName('angular', 'angular')} onMouseEnter={() => zoomout('angular')} onMouseLeave={() => zoomin('angular')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2'>
-                            <img src={angular} alt='' className='-rotate-45' />
-                        </div>
-                    </div>
-                    <div className='flex items-center justify-center w-full -mb-4'>
-                        <div id='javascript' onClick={() => setTechnologyName('javascript', 'javascript')} onMouseEnter={() => zoomout('javascript')} onMouseLeave={() => zoomin('javascript')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2'>
-                            <img src={javascript} alt='' className='-rotate-45' />
-                        </div>
-                        <div id='react' onClick={() => setTechnologyName('react / React-Native', 'react')} onMouseEnter={() => zoomout('react')} onMouseLeave={() => zoomin('react')} className='b-shadow cursor-pointer h-[90px] w-[90px] rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2'>
-                            <img src={react} alt='' className='-rotate-45' />
-                        </div>
-                        <div id='typescript' onClick={() => setTechnologyName('typescript', 'typescript')} onMouseEnter={() => zoomout('typescript')} onMouseLeave={() => zoomin('typescript')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2'>
-                            <img src={typescript} alt='' className='-rotate-45' />
-                        </div>
-                    </div>
-                    <div className='flex items-center justify-center w-full -mb-4'>
-                        <div id='git' onClick={() => setTechnologyName('git', 'git')} onMouseEnter={() => zoomout('git')} onMouseLeave={() => zoomin('git')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2 transition-transform duration-200'>
-                            <img src={git} alt='' className='-rotate-45' />
-                        </div>
-                        <div id='bitbucket' onClick={() => setTechnologyName('bitbucket', 'bitbucket')} onMouseEnter={() => zoomout('bitbucket')} onMouseLeave={() => zoomin('bitbucket')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-4 mx-[56px] mb-2 transition-transform duration-200'>
-                            <img src={bitbucket} alt='' className='-rotate-45' />
-                        </div>
-                        <div id='github' onClick={() => setTechnologyName('github', 'github')} onMouseEnter={() => zoomout('github')} onMouseLeave={() => zoomin('github')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2 transition-transform duration-200'>
-                            <img src={githubtech} alt='' className='-rotate-45 rounded-md' />
-                        </div>
-                        <div id='mongo' onClick={() => setTechnologyName('mongo db', 'mongo')} onMouseEnter={() => zoomout('mongo')} onMouseLeave={() => zoomin('mongo')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2 transition-transform duration-200'>
-                            <img src={mongo} alt='' className='-rotate-45' />
-                        </div>
-                    </div>
-                    <div className='flex items-center justify-center py-2 w-full -mb-4'>
-                        <div id='mysql' onClick={() => setTechnologyName('mysql', 'mysql')} onMouseEnter={() => zoomout('mysql')} onMouseLeave={() => zoomin('mysql')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2 transition-transform duration-200'>
-                            <img src={mysql} alt='' className='-rotate-45' />
-                        </div>
-                        <div id='mysql' onClick={() => setTechnologyName('mysql', 'mysql')} onMouseEnter={() => zoomout('mysql')} onMouseLeave={() => zoomin('mysql')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2 transition-transform duration-200'>
-                            <img src={mysql} alt='' className='-rotate-45' />
-                        </div>
-                        <div id='mysql' onClick={() => setTechnologyName('mysql', 'mysql')} onMouseEnter={() => zoomout('mysql')} onMouseLeave={() => zoomin('mysql')} className='shadow-left cursor-pointer h-16 w-16 rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 rotate-45 p-3 mx-[56px] mb-2 transition-transform duration-200'>
-                            <img src={mysql} alt='' className='-rotate-45' />
-                        </div>
-                    </div>
+                <div className='w-full mt-5 sm:!mt-0 flex flex-col items-center justify-center'>
+                    {skills.map((tech, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false }}
+                            transition={{ duration: 1, delay: index * 0.2 }}
+                            className='flex items-center justify-center w-full -mb-4'
+                        >
+                            {tech.map((item) => (
+                                <motion.div
+                                    key={item.id}
+                                    id={item.id}
+                                    onClick={() => setTechnologyName(item.name, item.id)}
+                                    onMouseEnter={() => zoomout(item.id)}
+                                    onMouseLeave={() => zoomin(item.id)}
+                                    initial={{ opacity: 0, y: 50 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: false }}
+                                    transition={{ duration: 1 }}
+                                    className={`cursor-pointer rounded-xl bg-gradient-to-b from-yellow-100 to-orange-300 !rotate-45 p-2 sm:!p-3 mx-[25px] sm:!mx-[56px] mb-2 ${item.cssClass}`}
+                                >
+                                    <img src={item.image} alt='' className='-rotate-45 rounded-md' />
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                    ))}
                 </div>
+
                 {/* <div className='grid grid-cols-1 sm:!grid-cols-3 lg:!flex flex-col items-center lg:!items-end justify-center lg:ml-24 relative h-full w-full'>
                     <motion.div
                         initial={{ opacity: 0 }}
