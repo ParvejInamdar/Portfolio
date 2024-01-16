@@ -13,7 +13,7 @@ const Works = () => {
                 viewport={{ once: false }}
                 transition={transition}
                 className="flex flex-col justify-center items-center lg:!items-start w-full my-8 lg:!my-0 lg:!ml-16">
-                <span className='text-[1.5rem] sm:!text-[2rem] lg:!text-[3rem] text-[--black] font-bold font-mova text-shadow'>Corporate Journey</span>
+                <span className='lg:!opacity-30 text-[1.5rem] sm:!text-[2rem] lg:!text-[5rem] text-[--black] font-bold font-mova text-shadow'>Corporate Journey</span>
                 <span className='text-[1rem] sm:!text-[1.5rem] lg:!text-[2rem] text-[--orange] font-bold font-mova text-shadow'>Making an Impact Across Organizations</span>
                 <div className="blur service-blur-left !bg-[#ABF1FF94]"></div>
             </motion.div>

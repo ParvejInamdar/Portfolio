@@ -16,7 +16,7 @@ const Portfolio = () => {
                     viewport={{ once: false }}
                     transition={transition}
                     className='flex flex-col items-center justify-center w-full lg:ml-8'>
-                    <span className='text-[1.5rem] sm:!text-[2rem] lg:!text-[3rem] text-[--black] font-bold font-mova text-shadow text-center lg:!text-start'>Recent Project</span>
+                    <span className='lg:!opacity-30 text-[1.5rem] sm:!text-[2rem] lg:!text-[6rem] text-[--black] font-bold font-mova text-shadow text-center lg:!text-start'>Recent Project</span>
                     <span className='text-[1rem] sm:!text-[1.5rem] lg:!text-[2rem] text-[--orange] font-bold font-mova text-shadow text-center lg:!text-start'>A Showcase of My Projects and Contributions</span>
                 </motion.div>
                 <div className="blur right-5 !bg-blue-200"></div>
