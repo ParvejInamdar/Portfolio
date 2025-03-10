@@ -48,7 +48,7 @@ const Experience = () => {
                         initial={{ opacity: 0, scale: 0.5 }}
                         key={1}
                         className="achivement flex flex-col items-center justify-center">
-                        <div className="circle h-[4rem] w-[4rem] text-[1.2rem] sm:!text-[1.5rem] lg:!text-[2rem] lg:!h-[6rem] lg:!w-[6rem]">2+</div>
+                        <div className="circle h-[4rem] w-[4rem] text-[1.2rem] sm:!text-[1.5rem] lg:!text-[2rem] lg:!h-[6rem] lg:!w-[6rem]">3+</div>
                         <span className='text-[--gray] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem]'>Years</span>
                         <span className='text-[--orange] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem]'>Experience</span>
                     </motion.div>
@@ -76,7 +76,7 @@ const Experience = () => {
                         initial={{ opacity: 0, scale: 0.5 }}
                         key={3}
                         className="achivement flex flex-col items-center justify-center">
-                        <div className="circle h-[4rem] w-[4rem] text-[1.2rem] sm:!text-[1.5rem] lg:!text-[2rem] lg:!h-[6rem] lg:!w-[6rem]">3+</div>
+                        <div className="circle h-[4rem] w-[4rem] text-[1.2rem] sm:!text-[1.5rem] lg:!text-[2rem] lg:!h-[6rem] lg:!w-[6rem]">2+</div>
                         <span className='text-[--gray] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem]'>Companies</span>
                         <span className='text-[--orange] font-mova text-[1rem] sm:!text-[1.3rem] lg:!text-[1.5rem]'>Work</span>
                     </motion.div>

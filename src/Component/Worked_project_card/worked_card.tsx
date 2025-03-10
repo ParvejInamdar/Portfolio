@@ -12,8 +12,11 @@ const WorkedCard = ({ appName, appImage, playstoreLink, appstoreLink, webLink, t
     };
 
     return (
+        // <div>
+            
+        // </div>
         <motion.div
-            className={`flex flex-col h-[13rem] w-[18rem] sm:!h-[15rem] sm:!w-[18rem] b-shadow shadow-md relative px-2 py-2 rounded-lg bg-gradient-to-br from-yellow-100 to-green-100 container`}
+            className={`flex flex-col h-[13rem] w-[18rem] sm:!h-[15rem] sm:!w-[18rem] b-shadow shadow-md relative px-3 py-2 rounded-lg bg-gradient-to-br from-yellow-100 to-green-100 container`}
             animate={{ rotateY: isFlipped ? 180 : 0 }}
             transition={{ duration: 1 }}>
             {!isFlipped && <>
